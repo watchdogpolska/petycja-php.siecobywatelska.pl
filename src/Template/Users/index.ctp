@@ -48,14 +48,12 @@
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <div class="paginator">
-                    <ul class="pagination">
-                        <?= $this->Paginator->prev('< ' . __('previous')) ?>
-                        <?= $this->Paginator->numbers() ?>
-                        <?= $this->Paginator->next(__('next') . ' >') ?>
-                    </ul>
-                    <p><?= $this->Paginator->counter() ?></p>
-                </div>
+                <nav class="paginator text-center">
+                    <?= $this->Paginator->numbers([
+                        'prev' => 'i:chevron-left ' . __('previous'),
+                        'next' =>  __('next') . ' i:chevron-right',
+                        ]) ?>
+                </nav>
             </div>
         </div>
 
