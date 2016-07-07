@@ -27,7 +27,7 @@
                 <td><?= h($signature->email) ?></td>
                 <td><?= h($signature->first_name) ?></td>
                 <td><?= h($signature->last_name) ?></td>
-                <td><?= h($signature->newsletter) ?></td>
+                <td><?php if(h($signature->newsletter)==1) echo 'yes'; else echo 'no' ?></td>
                 <td><?= h($signature->created) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $signature->id]) ?>

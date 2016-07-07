@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * Users Controller
@@ -109,21 +110,14 @@ class UsersController extends AppController
     public function login()
     {
       if($this->request->is('post')){
-
+        var_dump($_POST);
         $user = $this->Auth->identify();
-      //  $user = [$_POST['login'], $_POST['password']];
         if($user){
           $this->Auth->setUser($user);
           return $this->redirect($this->Auth->redirectUrl());
         }
         $this->Flash->error("Your login or password is incorrect.".var_dump($user));
       }
-    }
-
-    public function initialize()
-    {
-      parent::initialize();
-      $this->Auth->allow(['logout']);
     }
 
     public function logout()
