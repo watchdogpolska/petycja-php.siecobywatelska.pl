@@ -33,33 +33,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Petition</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav">
-
-            <li><?= $this->Html->link(__('Signatures'), ['controller' => 'Signatures', 'action' => 'index']) ?></li>
-            <li><?= $this->Html->link(__('Posts'), ['controller' => 'Posts', 'action' => 'index']) ?></li>
-            <li><?= $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+    <?= $this->Navbar->create('Petition', ['responsive' => true]) ?>
+        <?= $this->Navbar->beginMenu() ?>
+            <?= $this->Navbar->link(__('Signatures'), ['controller' => 'Signatures', 'action' => 'index']) ?>
+            <?= $this->Navbar->link(__('Posts'), ['controller' => 'Posts', 'action' => 'index']) ?>
+            <?= $this->Navbar->link(__('Users'), ['controller' => 'Users', 'action' => 'index']) ?>
+        <?= $this->Navbar->endMenu() ?>
+        <?= $this->Navbar->beginMenu(['class' => 'navbar-right']) ?>
+            <?= $this->Navbar->link(__('Logout'), ['_name' => 'auth.logout']) ?>
+        <?= $this->Navbar->endMenu() ?>
+    <?= $this->Navbar->end() ?>
     <div class="container">
         <div class="page-header">
             <h1><?= $this->fetch('title') ?></h1>
@@ -69,5 +52,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </div>
     <footer>
     </footer>
+    <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.min.js') ?>
+    <?= $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js') ?>
 </body>
 </html>

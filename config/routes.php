@@ -44,8 +44,8 @@ Router::defaultRouteClass('DashedRoute');
 
 
 Router::scope('/auth', function (RouteBuilder $routes) {
-    $routes->connect('/', ['controller' => 'Auth', 'action' => 'login', '_name' => 'auth.logout']);
-    $routes->connect('/logout', ['controller' => 'Auth', 'action' => 'logout', '_name' => 'auth.logout']);
+    $routes->connect('/', ['controller' => 'Auth', 'action' => 'login'], ['_name' => 'auth.login']);
+    $routes->connect('/logout', ['controller' => 'Auth', 'action' => 'logout',], [ '_name' => 'auth.logout']);
 });
 
 Router::scope('/', function (RouteBuilder $routes) {

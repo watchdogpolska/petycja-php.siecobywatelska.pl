@@ -32,6 +32,9 @@ class AppController extends Controller
         'Html' => [
             'className' => 'Bootstrap.BootstrapHtml'
         ],
+        'Navbar' => [
+            'className' => 'Bootstrap.BootstrapNavbar'
+        ],
         'Form' => [
             'className' => 'Bootstrap.BootstrapForm'
         ],
