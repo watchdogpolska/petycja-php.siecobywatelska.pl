@@ -1,21 +1,30 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Signatures'), ['action' => 'index']) ?></li>
-    </ul>
-</nav>
-<div class="signatures form large-9 medium-8 columns content">
-    <?= $this->Form->create($signature) ?>
-    <fieldset>
-        <legend><?= __('Add Signature') ?></legend>
-        <?php
-            echo $this->Form->input('comment');
-            echo $this->Form->input('email');
-            echo $this->Form->input('first_name');
-            echo $this->Form->input('last_name');
-            echo $this->Form->input('newsletter');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<div class="row">
+    <nav class="col-lg-3 col-lg-4" id="actions-sidebar">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title"><?= __('Actions') ?></div>
+            </div>
+            <div class="list-group">
+                <?= $this->Html->link(__('List Signatures'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+            </div>
+        </div>
+    </nav>
+    <div class="signatures form col-lg-9 col-md-8 content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title"><?= __('Add Signature') ?></h2>
+            </div>
+            <div class="panel-body">
+                <?= $this->Form->create($signature, ['horizontal' => true]) ?>
+                <?= $this->Form->input('first_name'); ?>
+                <?= $this->Form->input('last_name'); ?>
+                <?= $this->Form->input('email'); ?>
+                <?= $this->Form->textarea('comment'); ?>
+                <?= $this->Form->input('newsletter'); ?>
+                <?= $this->Form->button(__('Submit')) ?>
+                <?= $this->Form->end() ?>
+            </div>
+        </div>
+
+    </div>
 </div>
