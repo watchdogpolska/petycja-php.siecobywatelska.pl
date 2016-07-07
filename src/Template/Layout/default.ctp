@@ -33,35 +33,41 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<nav class="navbar navbar-default">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Petition</a>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Petition</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+
+            <li><?= $this->Html->link(__('Signatures'), ['controller' => 'Signatures', 'action' => 'index']) ?></li>
+            <li><?= $this->Html->link(__('Posts'), ['controller' => 'Posts', 'action' => 'index']) ?></li>
+            <li><?= $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1><?= $this->fetch('title') ?></h1>
+        </div>
+        <?= $this->Flash->render() ?>
+        <?= $this->fetch('content') ?>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav">
-        <li><?= $this->Html->link(__('List Posts'), ['controller' => 'posts', 'action' => 'index']) ?></li>
-        <li><a href="#">Link</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<?= $this->Flash->render() ?>
-<div class="container">
-    <?= $this->fetch('content') ?>
-</div>
-
+    <footer>
+    </footer>
 </body>
 </html>

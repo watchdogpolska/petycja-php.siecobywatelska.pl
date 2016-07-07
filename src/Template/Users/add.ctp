@@ -1,19 +1,25 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-    </ul>
+<nav class="col-lg-3 col-md-4 columns" id="actions-sidebar">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title"><?= __('Actions') ?></div>
+        </div>
+        <div class="list-group">
+            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+        </div>
+    </div>
 </nav>
-<div class="users form large-9 medium-8 columns content">
-    <?= $this->Form->create($user) ?>
-    <fieldset>
-        <legend><?= __('Add User') ?></legend>
-        <?php
-            echo $this->Form->input('login');
-            echo $this->Form->input('password');
-            echo $this->Form->input('email');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<div class="col-lg-9 col-md-8 columns content">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Add user</h3>
+        </div>
+        <div class="panel-body">
+            <?= $this->Form->create($user, ['horizontal' => true]) ?>
+            <?= $this->Form->input('login'); ?>
+            <?= $this->Form->input('password'); ?>
+            <?= $this->Form->input('email'); ?>
+            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->end() ?>
+        </div>
+    </div>
 </div>

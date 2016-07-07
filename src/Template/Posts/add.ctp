@@ -5,14 +5,12 @@
     </ul>
 </nav>
 <div class="posts form large-9 medium-8 columns content">
+    <h2><?= __('Add Post') ?></h2>
     <?= $this->Form->create($post) ?>
-    <fieldset>
-        <legend><?= __('Add Post') ?></legend>
-        <?php
-            echo $this->Form->input('title');
-            echo $this->Form->input('content');
-        ?>
-    </fieldset>
+    <?php
+        echo $this->Form->input('title');
+        echo $this->Form->input('content');
+    ?>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

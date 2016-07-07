@@ -2,7 +2,6 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * Users Controller
@@ -105,24 +104,5 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }
         return $this->redirect(['action' => 'index']);
-    }
-
-    public function login()
-    {
-      if($this->request->is('post')){
-        var_dump($_POST);
-        $user = $this->Auth->identify();
-        if($user){
-          $this->Auth->setUser($user);
-          return $this->redirect($this->Auth->redirectUrl());
-        }
-        $this->Flash->error("Your login or password is incorrect.".var_dump($user));
-      }
-    }
-
-    public function logout()
-    {
-      $this->Flash->success('You are now logged out.');
-      return $this->redirect($this->Auth->logout());
     }
 }
