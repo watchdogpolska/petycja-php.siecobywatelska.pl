@@ -18,6 +18,10 @@ class PostsController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Users']
+        ];
+
         $posts = $this->paginate($this->Posts);
 
         $this->set(compact('posts'));
@@ -34,7 +38,7 @@ class PostsController extends AppController
     public function view($id = null)
     {
         $post = $this->Posts->get($id, [
-            'contain' => []
+            'contain' => ['Users']
         ]);
 
         $this->set('post', $post);
@@ -58,7 +62,9 @@ class PostsController extends AppController
                 $this->Flash->error(__('The post could not be saved. Please, try again.'));
             }
         }
-        $this->set(compact('post'));
+        $users = $this->Posts->Users->find('list', ['limit' => 200]);
+        $this->set(compact('post', 'users'));
+
         $this->set('_serialize', ['post']);
     }
 
@@ -83,7 +89,8 @@ class PostsController extends AppController
                 $this->Flash->error(__('The post could not be saved. Please, try again.'));
             }
         }
-        $this->set(compact('post'));
+        $users = $this->Posts->Users->find('list', ['limit' => 200]);
+        $this->set(compact('post', 'users'));
         $this->set('_serialize', ['post']);
     }
 

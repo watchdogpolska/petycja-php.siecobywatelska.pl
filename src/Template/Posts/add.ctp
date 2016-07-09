@@ -6,6 +6,8 @@
             </div>
             <ul class="list-group">
                 <?= $this->Html->link(__('List Posts'), ['action' => 'index'], ['class' => 'list-group-item'] ) ?>
+                <?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add'], ['class' => 'list-group-item']) ?>
             </ul>
         </div>
     </div>
@@ -18,6 +20,7 @@
                 <?= $this->Form->create($post, ['horizontal' => true]) ?>
                 <?= $this->Form->input('title'); ?>
                 <?= $this->Form->textarea('content'); ?>
+                <?= $this->Form->input('user_id', ['options' => $users, 'empty' => true]); ?>
                 <?= $this->Form->button(__('Submit')) ?>
                 <?= $this->Form->end() ?>
             </div>

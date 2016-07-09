@@ -6,6 +6,8 @@
             </div>
             <ul class="list-group">
                 <?= $this->Html->link(__('New Post'), ['action' => 'add'], ['class' => 'list-group-item'] ) ?>
+                <?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add'], ['class' => 'list-group-item']) ?>
             </ul>
         </div>
     </div>
@@ -20,6 +22,7 @@
                         <tr>
                             <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('title') ?></th>
+                            <th scole="col"><?= $this->Paginator->sort('user_id') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                             <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -30,6 +33,7 @@
                         <tr>
                             <td><?= $this->Number->format($post->id) ?></td>
                             <td><?= h($post->title) ?></td>
+                            <td><?= $post->has('user') ? $this->Html->link($post->user->id, ['controller' => 'Users', 'action' => 'view', $post->user->id]) : '' ?></td>
                             <td><?= h($post->created) ?></td>
                             <td><?= h($post->modified) ?></td>
                             <td class="actions">

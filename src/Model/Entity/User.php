@@ -12,6 +12,9 @@ use Cake\ORM\Entity;
  * @property string $password
  * @property string $email
  * @property \Cake\I18n\Time $created
+ *
+ * @property \App\Model\Entity\Post[] $posts
+ *
  */
 class User extends Entity
 {

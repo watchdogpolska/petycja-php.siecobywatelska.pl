@@ -29,6 +29,10 @@
                     <td><?= $this->Number->format($post->id) ?></td>
                 </tr>
                 <tr>
+                    <th scole="row"><?= __('User') ?></th>
+                    <td><?= $post->has('user') ? $this->Html->link($post->user->id, ['controller' => 'Users', 'action' => 'view', $post->user->id]) : '' ?></td>
+                </tr>
+                <tr>
                     <th scope="row"><?= __('Created') ?></th>
                     <td><?= h($post->created) ?></td>
                 </tr>
