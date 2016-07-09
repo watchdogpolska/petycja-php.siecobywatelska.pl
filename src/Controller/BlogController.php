@@ -15,7 +15,7 @@ class BlogController extends AppController
     public $paginate = [
         'limit' => 25,
         'order' => [
-            'Posts.modified' => 'desc'
+            'Posts.created' => 'desc'
         ]
     ];
 
