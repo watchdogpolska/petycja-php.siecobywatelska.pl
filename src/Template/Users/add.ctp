@@ -17,6 +17,7 @@
             <div class="panel-body">
                 <?= $this->Form->create($user, ['horizontal' => true]) ?>
                 <?= $this->Form->input('login'); ?>
+                <?= $this->Form->input('display_name'); ?>
                 <?= $this->Form->input('password'); ?>
                 <?= $this->Form->input('email'); ?>
                 <?= $this->Form->button(__('Submit')) ?>

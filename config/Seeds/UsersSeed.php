@@ -23,16 +23,19 @@ class UsersSeed extends AbstractSeed
         $data = [
             [
                 'login' => 'user1',
+                'display_name' => $faker->name,
                 'email' => 'user1@example.com',
                 'password' => $hasher->hash('password')
             ],
             [
                 'login' => 'user2',
+                'display_name' => $faker->name,
                 'email' => 'user2@example.com',
                 'password' => $hasher->hash('password')
             ],
             [
                 'login' => 'user3',
+                'display_name' => $faker->name,
                 'email' => 'user3@example.com',
                 'password' => $hasher->hash('password')
             ]

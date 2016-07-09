@@ -19,8 +19,8 @@
                         </tr>
                         <?php if($post->has('user')):?>
                         <tr>
-                            <th scole="row"><?= __('Author') ?></th>
-                            <td><?= $post->user->id; ?></td>
+                            <th scole="row"><?= __('Author:') ?></th>
+                            <td><?= $post->user->display_name; ?></td>
                         </tr>
                         <?php endif; ?>
                     </tbody>

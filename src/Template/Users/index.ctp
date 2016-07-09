@@ -20,6 +20,7 @@
                         <tr>
                             <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('login') ?></th>
+                            <th scope="col"><?= $this->Paginator->sort('display_name') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                             <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -30,6 +31,7 @@
                         <tr>
                             <td><?= $this->Number->format($user->id) ?></td>
                             <td><?= h($user->login) ?></td>
+                            <td><?= h($user->display_name) ?></td>
                             <td><?= h($user->email) ?></td>
                             <td><?= h($user->created) ?></td>
                             <td class="actions">

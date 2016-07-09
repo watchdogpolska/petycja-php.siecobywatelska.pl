@@ -35,7 +35,7 @@ class UsersTable extends Table
         parent::initialize($config);
 
         $this->table('users');
-        $this->displayField('id');
+        $this->displayField('display_name');
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
@@ -61,6 +61,10 @@ class UsersTable extends Table
             ->requirePresence('login', 'create')
             ->notEmpty('login')
             ->add('login', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+
+        $validator
+            ->requirePresence('display_name', 'create')
+            ->notEmpty('display_name');
 
         $validator
             ->requirePresence('password', 'create')
