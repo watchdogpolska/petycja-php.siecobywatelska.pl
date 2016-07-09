@@ -55,7 +55,6 @@
                     <tr>
                         <th scope="col"><?= __('Id') ?></th>
                         <th scope="col"><?= __('Title') ?></th>
-                        <th scope="col"><?= __('Content') ?></th>
                         <th scope="col"><?= __('Created') ?></th>
                         <th scope="col"><?= __('Modified') ?></th>
                         <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -66,7 +65,6 @@
                     <tr>
                         <td><?= h($posts->id) ?></td>
                         <td><?= h($posts->title) ?></td>
-                        <td><?= h($posts->content) ?></td>
                         <td><?= h($posts->created) ?></td>
                         <td><?= h($posts->modified) ?></td>
                         <td class="actions">
