@@ -17,6 +17,12 @@
                             <th scope="row"><?= __('Creation date:'); ?> </th>
                             <td><?= h($post->created) ?></td>
                         </tr>
+                        <?php if($post->has('user')):?>
+                        <tr>
+                            <th scole="row"><?= __('Author') ?></th>
+                            <td><?= $post->user->id; ?></td>
+                        </tr>
+                        <?php endif; ?>
                     </tbody>
                 </table>
                 <div class="panel-body">
