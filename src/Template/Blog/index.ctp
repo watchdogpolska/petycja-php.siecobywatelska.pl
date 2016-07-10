@@ -26,7 +26,7 @@
                     </tbody>
                 </table>
                 <div class="panel-body">
-                    <?= $post->content ?>
+                    <?= $this->Text->truncate($post->content, 255) ?>
                 </div>
             </div>
         <?php endforeach; ?>
