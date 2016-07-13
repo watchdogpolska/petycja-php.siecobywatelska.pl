@@ -23,7 +23,7 @@ class BlogController extends AppController
     public function initialize()
     {
         parent::initialize();
-        $this->Auth->allow(['index']);
+        $this->Auth->allow();
         $this->loadModel('Posts');
     }
 
@@ -33,5 +33,18 @@ class BlogController extends AppController
 
         $this->set(compact('blog'));
         $this->set('_serialize', ['blog']);
+    }
+
+    public function post()
+    {
+        $id = $this->request->params['pass'];
+
+        $post = $this->Posts->find('id',[
+            'id' => $id
+        ]);
+
+        $this->set([
+            'blog' => $post
+        ]);
     }
 }

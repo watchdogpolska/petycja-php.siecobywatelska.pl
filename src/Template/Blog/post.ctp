@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="posts index col-lg-9 col-md-8 content">
         <?php foreach ($blog as $post): ?>
@@ -27,17 +26,9 @@
                     </tbody>
                 </table>
                 <div class="panel-body">
-                    <?= $this->Text->truncate($post->content, 255,
-                     ['exact' => 'false', 'ellipsis' => $this->Html->link(__(' view more...'), ['action' => 'post', $post->id])]) ?>
-
+                    <?= $post->content ?>
                 </div>
             </div>
         <?php endforeach; ?>
-        <nav class="paginator text-center">
-            <?= $this->Paginator->numbers([
-                'prev' => 'i:chevron-left ' . __('previous'),
-                'next' =>  __('next') . ' i:chevron-right',
-                ]) ?>
-        </nav>
     </div>
 </div>

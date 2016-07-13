@@ -82,4 +82,9 @@ class PostsTable extends Table
         return $rules;
     }
 
+    public function findId(Query $query, array $options)
+    {
+        return $this->find()
+        ->distinct(['Posts.id'])->where(['Posts.id IN' => $options['id']]);
+    }
 }
