@@ -6,10 +6,10 @@
                 <h3 class="panel-title">Login</h3>
             </div>
             <div class="panel-body">
-                <?= $this->Form->create(null, ['horizontal' => true]) ?>
-                <?= $this->Form->input('login'); ?> 
-                <?= $this->Form->input('password'); ?> 
-                <?= $this->Form->button(__('Submit')) ?>
+                <?= $this->Form->create(null) ?>
+                <?= $this->Form->input('login'); ?>
+                <?= $this->Form->input('password'); ?>
+                <?= $this->Form->button(__('Login')) ?>
                 <?= $this->Form->end() ?>
             </div>
         </div>
