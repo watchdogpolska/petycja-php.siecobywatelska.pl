@@ -50,7 +50,7 @@ Router::scope('/auth', function (RouteBuilder $routes) {
 
 Router::scope('/', function (RouteBuilder $routes){
     $routes->connect('/', ['controller' => 'Blog', 'action' => 'index']);
-    $routes->connect('/:id/*', ['controller' => 'Blog', 'action' => 'post'], ['pass' => ['id'], 'id' => '\d+']);
+    $routes->connect('/:id/*', ['controller' => 'Blog', 'action' => 'view'], ['pass' => ['id'], 'id' => '\d+']);
 
     /**
      * Connect catchall routes for all controllers.

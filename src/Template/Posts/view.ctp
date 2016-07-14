@@ -15,7 +15,7 @@
                     ]) ?>
                 <?= $this->Html->link(__('List Posts'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
                 <?= $this->Html->link(__('New Post'), ['action' => 'add'], ['class' => 'list-group-item']) ?>
-                <?= $this->Html->link(__('View on site'), ['controller' => 'blog', 'action' => 'post', $post->id], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('View on site'), ['controller' => 'blog', 'action' => 'view', $post->id], ['class' => 'list-group-item']) ?>
             </div>
         </div>
     </div>

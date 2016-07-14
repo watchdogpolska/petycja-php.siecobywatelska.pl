@@ -5,7 +5,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h2 class="panel-title">
-                        <?= $this->Html->link($post->title, ['action' => 'post', $post->id]) ?>
+                        <?= $this->Html->link($post->title, ['action' => 'view', $post->id]) ?>
                     </h2>
                 </div>
                 <table class="table table-hover">
@@ -30,7 +30,7 @@
                 </table>
                 <div class="panel-body">
                     <?= $this->Text->truncate($post->content, 255,
-                     ['exact' => 'false', 'ellipsis' => $this->Html->link(__(' view more...'), ['action' => 'post', $post->id])]) ?>
+                     ['exact' => 'false', 'ellipsis' => $this->Html->link(__('View more...'), ['action' => 'view', $post->id])]) ?>
 
                 </div>
             </div>

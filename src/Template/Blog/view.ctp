@@ -7,7 +7,7 @@
                 </div>
                 <table class="table table-hover">
                     <tbody>
-                        <?php if($post->created!=$post->modified):?>
+                        <?php if($post->isHasBennModifited()):?>
                             <tr>
                                 <th scope="row"><?= __('Modification date:'); ?></th>
                                 <td><?= h($post->modified) ?></td>
@@ -26,6 +26,7 @@
                     </tbody>
                 </table>
                 <div class="panel-body">
+                    <?php dump($post); ?>
                     <?= $post->content ?>
                 </div>
             </div>

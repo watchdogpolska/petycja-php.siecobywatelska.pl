@@ -35,7 +35,7 @@ class BlogController extends AppController
         $this->set('_serialize', ['posts']);
     }
 
-    public function post()
+    public function view()
     {
         $id = $this->request->params['pass'];
 
