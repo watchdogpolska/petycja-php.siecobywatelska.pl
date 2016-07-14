@@ -29,8 +29,12 @@
                     </tbody>
                 </table>
                 <div class="panel-body">
-                    <?= $this->Text->truncate($post->content, 255,
-                     ['exact' => 'false', 'ellipsis' => $this->Html->link(__('View more...'), ['action' => 'view', $post->id])]) ?>
+                    <?php
+                    $link_more = $this->Html->link(
+                        __('Read more') . ' <span class="sr-only">' . h($post->title) . '</span>' ,
+                        ['action' => 'view', $post->id],
+                        ['escape' => false]); ?>
+                    <?= $this->Text->truncate($post->content, 255, ['exact' => 'false', 'ellipsis' => ' ' . $link_more]) ?>
 
                 </div>
             </div>
