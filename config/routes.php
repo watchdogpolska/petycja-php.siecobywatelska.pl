@@ -48,23 +48,9 @@ Router::scope('/auth', function (RouteBuilder $routes) {
     $routes->connect('/logout', ['controller' => 'Auth', 'action' => 'logout',], [ '_name' => 'auth.logout']);
 });
 
-Router::scope('/blog', function (RouteBuilder $routes){
-    $routes->connect('/*', ['controller' => 'Blog', 'action' => 'index']);
-    $routes->connect('/post/:id/*', ['controller' => 'Blog', 'action' => 'post'], ['pass'=>['id'], 'id'=>'\d+']);
-});
-
-Router::scope('/', function (RouteBuilder $routes) {
-    /**
-     * Here, we are connecting '/' (base path) to a controller called 'Pages',
-     * its action called 'display', and we pass a param to select the view file
-     * to use (in this case, src/Template/Pages/home.ctp)...
-     */
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-
-    /**
-     * ...and connect the rest of 'Pages' controller's URLs.
-     */
-    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+Router::scope('/', function (RouteBuilder $routes){
+    $routes->connect('/', ['controller' => 'Blog', 'action' => 'index']);
+    $routes->connect('/:id/*', ['controller' => 'Blog', 'action' => 'post'], ['pass' => ['id'], 'id' => '\d+']);
 
     /**
      * Connect catchall routes for all controllers.
