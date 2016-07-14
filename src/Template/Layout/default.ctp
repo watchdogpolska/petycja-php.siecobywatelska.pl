@@ -40,7 +40,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->Navbar->link(__('Users'), ['controller' => 'Users', 'action' => 'index']) ?>
         <?= $this->Navbar->endMenu() ?>
         <?= $this->Navbar->beginMenu(['class' => 'navbar-right']) ?>
-            <?= $this->Navbar->link(__('Logout'), ['_name' => 'auth.logout']) ?>
+            <?php if($this->request->session()->read('Auth.User.id')): ?>
+                <?= $this->Navbar->link(__('Logout'), ['_name' => 'auth.logout']) ?>
+            <?php else: ?>
+                <?= $this->Navbar->link(__('Login'), ['_name' => 'auth.login']) ?>
+            <?php endif; ?>
         <?= $this->Navbar->endMenu() ?>
     <?= $this->Navbar->end() ?>
     <div class="container">
