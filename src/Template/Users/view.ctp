@@ -22,10 +22,18 @@
     <div class="users view col-lg-9 col-md-8 columns content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title"><?= h($user->id) ?></h2>
+                <h2 class="panel-title"><?= h($user->display_name) ?></h2>
             </div>
             <table class="table">
                 <tbody>
+                    <tr>
+                        <th scope="row"><?= __('Id') ?></th>
+                        <td><?= $this->Number->format($user->id) ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?= __('Display name') ?></th>
+                        <td><?= h($user->display_name) ?></td>
+                    </tr>
                     <tr>
                         <th scope="row"><?= __('Login') ?></th>
                         <td><?= h($user->login) ?></td>
@@ -33,10 +41,6 @@
                     <tr>
                         <th scope="row"><?= __('Email') ?></th>
                         <td><?= h($user->email) ?></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><?= __('Id') ?></th>
-                        <td><?= $this->Number->format($user->id) ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Created') ?></th>
