@@ -4,7 +4,9 @@
         <?php foreach ($posts as $post): ?>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h2 class="panel-title"><?= h($post->title) ?></h2>
+                    <h2 class="panel-title">
+                        <?= $this->Html->link($post->title, ['action' => 'post', $post->id]) ?>
+                    </h2>
                 </div>
                 <table class="table table-hover">
                     <tbody>
