@@ -34,7 +34,7 @@
                         __('Read more') . ' <span class="sr-only">' . h($post->title) . '</span>' ,
                         ['action' => 'view', $post->id],
                         ['escape' => false]); ?>
-                    <?= $this->Text->truncate($post->content, 255, ['exact' => 'false', 'ellipsis' => ' ' . $link_more]) ?>
+                    <?= $this->Text->truncate($post->content, 255, ['exact' => false, 'ellipsis' => ' ' . $link_more]) ?>
 
                 </div>
             </div>
