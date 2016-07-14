@@ -23,6 +23,7 @@
                             <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                             <th scole="col"><?= $this->Paginator->sort('user_id') ?></th>
+                            <th scole="col"><?= $this->Paginator->sort('state') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                             <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -34,6 +35,7 @@
                             <td><?= $this->Number->format($post->id) ?></td>
                             <td><?= h($post->title) ?></td>
                             <td><?= $post->has('user') ? $this->Html->link($post->user->display_name, ['controller' => 'Users', 'action' => 'view', $post->user->id]) : '' ?></td>
+                            <td><?= h($post->state) ?></td>
                             <td><?= h($post->created) ?></td>
                             <td><?= h($post->modified) ?></td>
                             <td class="actions">

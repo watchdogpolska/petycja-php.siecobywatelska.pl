@@ -33,6 +33,10 @@
                     <td><?= $post->has('user') ? $this->Html->link($post->user->display_name, ['controller' => 'Users', 'action' => 'view', $post->user->id]) : '' ?></td>
                 </tr>
                 <tr>
+                    <th scole="row"><?= __('State') ?></th>
+                    <td><?= h($post->state) ?></td>
+                </tr>
+                <tr>
                     <th scope="row"><?= __('Created') ?></th>
                     <td><?= h($post->created) ?></td>
                 </tr>
