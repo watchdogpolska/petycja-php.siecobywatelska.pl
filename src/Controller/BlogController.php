@@ -29,22 +29,22 @@ class BlogController extends AppController
 
     public function index()
     {
-        $blog = $this->paginate($this->Posts);
+        $posts = $this->paginate($this->Posts);
 
-        $this->set(compact('blog'));
-        $this->set('_serialize', ['blog']);
+        $this->set(compact('posts'));
+        $this->set('_serialize', ['posts']);
     }
 
     public function post()
     {
         $id = $this->request->params['pass'];
 
-        $post = $this->Posts->find('id',[
+        $posts = $this->Posts->find('id',[
             'id' => $id
         ]);
 
         $this->set([
-            'blog' => $post
+            'posts' => $posts
         ]);
     }
 }

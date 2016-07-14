@@ -1,6 +1,6 @@
 <div class="row">
     <div class="posts index col-lg-9 col-md-8 content">
-        <?php foreach ($blog as $post): ?>
+        <?php foreach ($posts as $post): ?>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h2 class="panel-title"><?= h($post->title) ?></h2>
