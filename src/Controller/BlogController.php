@@ -29,7 +29,7 @@ class BlogController extends AppController
 
     public function index()
     {
-        $posts = $this->paginate($this->Posts);
+        $posts = $this->paginate($this->Posts->notDraft());
 
         $this->set(compact('posts'));
         $this->set('_serialize', ['posts']);

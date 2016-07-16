@@ -87,4 +87,9 @@ class PostsTable extends Table
         return $this->find()
         ->distinct(['Posts.id'])->where(['Posts.id IN' => $options['id']]);
     }
+
+    public function notDraft(){
+        return $this->find()
+        ->where(['NOT' => ['Posts.state' => '2']])->order(['Posts.state' =>'desc']);
+    }
 }

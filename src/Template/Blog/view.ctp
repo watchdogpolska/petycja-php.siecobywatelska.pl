@@ -26,7 +26,6 @@
                     </tbody>
                 </table>
                 <div class="panel-body">
-                    <?php dump($post); ?>
                     <?= $post->content ?>
                 </div>
             </div>
