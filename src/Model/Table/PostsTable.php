@@ -88,8 +88,8 @@ class PostsTable extends Table
         ->distinct(['Posts.id'])->where(['Posts.id IN' => $options['id']]);
     }
 
-    public function notDraft(){
-        return $this->find()
-        ->where(['NOT' => ['Posts.state' => '2']])->order(['Posts.state' =>'desc']);
+    public function findVisible(Query $query, array $options)
+    {
+        return $query->where(['Posts.state IN' => ['pinned', 'published']]);
     }
 }

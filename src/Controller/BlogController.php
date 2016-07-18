@@ -14,9 +14,11 @@ class BlogController extends AppController
 
     public $paginate = [
         'limit' => 25,
+        'finder' => 'visible',
         'contain' => ['Users'],
         'order' => [
-            'Posts.created' => 'desc'
+            'Posts.state' => 'asc',
+            'Posts.created' => 'desc',
         ]
     ];
 
@@ -29,7 +31,7 @@ class BlogController extends AppController
 
     public function index()
     {
-        $posts = $this->paginate($this->Posts->notDraft());
+        $posts = $this->paginate($this->Posts);
 
         $this->set(compact('posts'));
         $this->set('_serialize', ['posts']);

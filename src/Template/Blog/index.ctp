@@ -2,7 +2,7 @@
 <div class="row">
     <div class="posts index col-lg-9 col-md-8 content">
         <?php foreach ($posts as $post): ?>
-            <div class="panel panel-default">
+            <div class="panel <?= ($post->state == 'pinned') ? 'panel-primary' : 'panel-default';?>">
                 <div class="panel-heading">
                     <h2 class="panel-title">
                         <?= $this->Html->link($post->title, ['action' => 'view', $post->id]) ?>

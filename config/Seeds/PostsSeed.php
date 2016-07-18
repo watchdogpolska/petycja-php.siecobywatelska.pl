@@ -29,7 +29,7 @@ class PostsSeed extends AbstractSeed
                 'content' => '<p>' . implode('</p><p>', $faker->paragraphs(rand(3, 20), false)) . '</p>',
                 'created' => date('Y-m-d H:i:s'),
                 'user_id' => $faker->numberBetween(1, 20),
-                'state' => $faker->numberBetween(0, 2)
+                'state' => $faker->randomElement(['published', 'pinned', 'draft'])
             ];
         }
 

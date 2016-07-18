@@ -21,7 +21,11 @@
                 <?= $this->Form->input('title'); ?>
                 <?= $this->Form->textarea('content'); ?>
                 <?= $this->Form->input('user_id', ['options' => $users, 'empty' => true]); ?>
-                <?= $this->Form->input('state', ['options' => ['published', 'pinned', 'draft'], 'empty' => false]); ?>
+                <?= $this->Form->input('state', ['options' => [
+                    'published' => __('Published'),
+                    'pinned' => __('Pinned'),
+                    'draft' => __('Draft')
+                ], 'empty' => false]); ?>
                 <?= $this->Form->button(__('Submit')) ?>
                 <?= $this->Form->end() ?>
             </div>
