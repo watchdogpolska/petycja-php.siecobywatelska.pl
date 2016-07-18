@@ -28,16 +28,28 @@
             <div class="panel-body">
                 <?= $this->Form->create($post, ['horizontal' => true]) ?>
                 <?= $this->Form->input('title'); ?>
-                <?= $this->Form->textarea('content'); ?>
-                <?= $this->Form->input('user_id', ['options' => $users, 'empty' => true]); ?>
                 <?= $this->Form->input('state', ['options' => [
                     'published' => __('Published'),
                     'pinned' => __('Pinned'),
                     'draft' => __('Draft')
                 ], 'empty' => false]); ?>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <?= $this->Form->textarea('content', ['class' => 'tinymce']); ?>
+                    </div>
+                </div>
+                <?= $this->Form->input('user_id', ['options' => $users, 'empty' => true]); ?>
                 <?= $this->Form->button(__('Submit')) ?>
                 <?= $this->Form->end() ?>
             </div>
         </div>
     </div>
 </div>
+<?php
+$this->Html->script('//cdn.tinymce.com/4/tinymce.min.js', [
+    'block' => true
+]);
+?>
+<?php $this->append('script'); ?>
+<script>tinymce.init({ selector:'.tinymce' });</script>
+<?php $this->end();?>
