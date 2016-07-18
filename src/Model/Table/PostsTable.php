@@ -66,6 +66,11 @@ class PostsTable extends Table
             ->requirePresence('content', 'create')
             ->notEmpty('content');
 
+        $validator
+            ->requirePresence('state', 'create')
+            ->notEmpty('state')
+            ->inList('state', ['published', 'pinned', 'draft']);
+
         return $validator;
     }
 
