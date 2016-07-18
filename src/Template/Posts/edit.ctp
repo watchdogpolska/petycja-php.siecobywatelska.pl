@@ -38,7 +38,6 @@
                         <?= $this->Form->textarea('content', ['class' => 'tinymce']); ?>
                     </div>
                 </div>
-                <?= $this->Form->input('user_id', ['options' => $users, 'empty' => true]); ?>
                 <?= $this->Form->button(__('Submit')) ?>
                 <?= $this->Form->end() ?>
             </div>
