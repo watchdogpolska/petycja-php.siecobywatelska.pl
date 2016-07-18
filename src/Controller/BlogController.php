@@ -41,12 +41,11 @@ class BlogController extends AppController
     {
         $id = $this->request->params['pass'];
 
-        $posts = $this->Posts->find('id',[
-            'id' => $id
+        $post = $this->Posts->get($id, [
+            'finder' => 'visible',
+            'contain' => 'Users'
         ]);
 
-        $this->set([
-            'posts' => $posts
-        ]);
+        $this->set(compact('post'));
     }
 }
