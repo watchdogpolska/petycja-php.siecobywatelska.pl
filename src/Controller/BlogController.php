@@ -46,6 +46,10 @@ class BlogController extends AppController
             'contain' => 'Users'
         ]);
 
+        if ($post->type == 'link') {
+            return $this->redirect($post->link_target);
+        }
+
         $this->set(compact('post'));
     }
 }

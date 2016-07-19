@@ -5,6 +5,7 @@
             <div class="panel <?= ($post->state == 'pinned') ? 'panel-primary' : 'panel-default';?>">
                 <div class="panel-heading">
                     <h2 class="panel-title">
+                        <?= $this->element('post-type-icon', ['post' => $post]); ?>
                         <?= $this->Html->link($post->title, ['action' => 'view', $post->id]) ?>
                     </h2>
                 </div>

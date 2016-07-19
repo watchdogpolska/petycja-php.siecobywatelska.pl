@@ -81,4 +81,14 @@ class PostsTableTest extends TestCase
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
+
+    /**
+     * Test findVisible method
+     *
+     * @return void
+     */
+    public function testFindVisible()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 }

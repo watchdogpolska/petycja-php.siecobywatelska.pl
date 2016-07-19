@@ -28,6 +28,13 @@
             <div class="panel-body">
                 <?= $this->Form->create($post, ['horizontal' => true]) ?>
                 <?= $this->Form->input('title'); ?>
+                <?= $this->Form->input('type', ['options' => [
+                    'text' => __('Text'),
+                    'link' => __('Link'),
+                ], 'empty' => false]); ?>
+                <div class="form-only-for-type-link">
+                    <?= $this->Form->input('link_target'); ?>
+                </div>
                 <?= $this->Form->input('state', ['options' => [
                     'published' => __('Published'),
                     'pinned' => __('Pinned'),
@@ -51,4 +58,19 @@ $this->Html->script('//cdn.tinymce.com/4/tinymce.min.js', [
 ?>
 <?php $this->append('script'); ?>
 <script>tinymce.init({ selector:'.tinymce' });</script>
+<script>
+    (function ($) {
+        function checkType() {
+            if( $type.val() == 'link') {
+                $('.form-only-for-type-link').show();
+            }else{
+                $('.form-only-for-type-link').hide();
+            }
+            console.log($type);
+        }
+        var $type = $('#type');
+        $type.change(checkType);
+        checkType();
+    }) (jQuery)
+</script>
 <?php $this->end();?>

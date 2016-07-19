@@ -43,7 +43,6 @@ class PostsTable extends Table
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id'
         ]);
-
     }
 
     /**
@@ -70,6 +69,16 @@ class PostsTable extends Table
             ->requirePresence('state', 'create')
             ->notEmpty('state')
             ->inList('state', ['published', 'pinned', 'draft']);
+
+        $validator
+            ->requirePresence('type', 'create')
+            ->notEmpty('type');
+
+        $validator
+            ->requirePresence('link_target', 'create')
+            ->allowEmpty('link_target', function($context) {
+                return $context && $context['data'] && $context['data']['type'] != 'link';
+            });
 
         return $validator;
     }

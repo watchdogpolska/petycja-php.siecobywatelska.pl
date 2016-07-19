@@ -30,7 +30,8 @@ class AppController extends Controller
 
     public $helpers = [
         'Html' => [
-            'className' => 'Bootstrap.BootstrapHtml'
+            'className' => 'Bootstrap.BootstrapHtml',
+            'useFontAwesome' => true // Add this line to set font awesome as default
         ],
         'Navbar' => [
             'className' => 'Bootstrap.BootstrapNavbar'

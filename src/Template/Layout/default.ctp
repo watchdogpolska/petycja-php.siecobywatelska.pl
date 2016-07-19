@@ -27,10 +27,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') ?>
+    <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
 </head>
 <body>
     <?= $this->Navbar->create('Petition', ['responsive' => true]) ?>
@@ -56,7 +56,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </div>
     <footer>
     </footer>
-    <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.min.js') ?>
+    <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.js') ?>
     <?= $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js') ?>
+
+    <?= $this->fetch('script') ?>
 </body>
 </html>

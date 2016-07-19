@@ -22,7 +22,7 @@
     <div class="posts view col-lg-9 col-md-8 content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title"><?= h($post->title) ?></h2>
+                <h2 class="panel-title"><?= $this->element('post-type-icon', ['post' => $post]); ?> : <?= h($post->title) ?></h2>
             </div>
             <table class="table">
                 <tr>
@@ -37,6 +37,12 @@
                     <th scole="row"><?= __('State') ?></th>
                     <td><?= h($post->state) ?></td>
                 </tr>
+                <?php if($post->type == 'link'): ?>
+                    <tr>
+                        <th scole="row"><?= __('Limk') ?></th>
+                        <td><?= h($post->link_target) ?></td>
+                    </tr>
+                <?php endif; ?>
                 <tr>
                     <th scope="row"><?= __('Created') ?></th>
                     <td><?= h($post->created) ?></td>

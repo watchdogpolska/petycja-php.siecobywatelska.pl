@@ -20,6 +20,7 @@
                 <table cellpadding="0" cellspacing="0" class="table table-hover">
                     <thead>
                         <tr>
+                            <th scope="col"><?= $this->Paginator->sort('type') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                             <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                             <th scole="col"><?= $this->Paginator->sort('user_id') ?></th>
@@ -32,6 +33,7 @@
                     <tbody>
                         <?php foreach ($posts as $post): ?>
                         <tr>
+                            <td><?= $this->element('post-type-icon', ['post' => $post]); ?></td>
                             <td><?= $this->Number->format($post->id) ?></td>
                             <td><?= h($post->title) ?></td>
                             <td><?= $post->has('user') ? $this->Html->link($post->user->display_name, ['controller' => 'Users', 'action' => 'view', $post->user->id]) : '' ?></td>
