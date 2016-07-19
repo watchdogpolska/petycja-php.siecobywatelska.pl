@@ -30,4 +30,10 @@ class Signature extends Entity
         '*' => true,
         'id' => false
     ];
+
+    protected function _getName()
+    {
+        return $this->_properties['first_name'] . '  ' .
+            $this->_properties['last_name'];
+    }
 }

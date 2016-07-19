@@ -48,6 +48,13 @@ Router::scope('/auth', function (RouteBuilder $routes) {
     $routes->connect('/logout', ['controller' => 'Auth', 'action' => 'logout',], [ '_name' => 'auth.logout']);
 });
 
+Router::scope('/petition', function (RouteBuilder $routes) {
+    $routes->connect('/', ['controller' => 'Petition', 'action' => 'index'], ['_name' => 'petition.index']);
+    $routes->connect('/form', ['controller' => 'Petition', 'action' => 'add',], [ '_name' => 'petition.add']);
+    $routes->connect('/thank-you', ['controller' => 'Petition', 'action' => 'thank',], [ '_name' => 'petition.thank']);
+});
+
+
 Router::scope('/', function (RouteBuilder $routes){
     $routes->connect('/', ['controller' => 'Blog', 'action' => 'index']);
     $routes->connect('/:id/*', ['controller' => 'Blog', 'action' => 'view'], ['pass' => ['id'], 'id' => '\d+']);

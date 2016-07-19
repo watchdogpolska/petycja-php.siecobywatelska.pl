@@ -53,7 +53,7 @@ class SignaturesTable extends Table
 
         $validator
             ->requirePresence('comment', 'create')
-            ->notEmpty('comment');
+            ->allowEmpty('comment');
 
         $validator
             ->email('email')

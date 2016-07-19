@@ -33,11 +33,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('css') ?>
 </head>
 <body>
-    <?= $this->Navbar->create('Petition', ['responsive' => true]) ?>
+    <?= $this->Navbar->create(__('Petition'), ['responsive' => true]) ?>
         <?= $this->Navbar->beginMenu() ?>
-            <?= $this->Navbar->link(__('Signatures'), ['controller' => 'Signatures', 'action' => 'index']) ?>
-            <?= $this->Navbar->link(__('Posts'), ['controller' => 'Posts', 'action' => 'index']) ?>
-            <?= $this->Navbar->link(__('Users'), ['controller' => 'Users', 'action' => 'index']) ?>
+            <?= $this->Navbar->link(__('Sign'), ['controller' => 'Petition', 'action' => 'index']) ?>
+            <?php if($this->request->session()->read('Auth.User.id')): ?>
+                <?= $this->Navbar->link(__('Signatures'), ['controller' => 'Signatures', 'action' => 'index']) ?>
+                <?= $this->Navbar->link(__('Posts'), ['controller' => 'Posts', 'action' => 'index']) ?>
+                <?= $this->Navbar->link(__('Users'), ['controller' => 'Users', 'action' => 'index']) ?>
+            <?php endif; ?>
         <?= $this->Navbar->endMenu() ?>
         <?= $this->Navbar->beginMenu(['class' => 'navbar-right']) ?>
             <?php if($this->request->session()->read('Auth.User.id')): ?>
