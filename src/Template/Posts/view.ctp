@@ -35,11 +35,11 @@
                 </tr>
                 <tr>
                     <th scole="row"><?= __('State') ?></th>
-                    <td><?= h($post->state) ?></td>
+                    <td><?= h(__($post->state)) ?></td>
                 </tr>
                 <?php if($post->type == 'link'): ?>
                     <tr>
-                        <th scole="row"><?= __('Limk') ?></th>
+                        <th scole="row"><?= __('Link') ?></th>
                         <td><?= h($post->link_target) ?></td>
                     </tr>
                 <?php endif; ?>

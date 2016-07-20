@@ -1,0 +1,398 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-07-20 14:34+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/AuthController.php:33
+msgid "Invalid username or password, try again"
+msgstr ""
+
+#: Controller/PetitionController.php:52
+#: Controller/SignaturesController.php:55;80
+msgid "The signature has been saved."
+msgstr ""
+
+#: Controller/PetitionController.php:55
+#: Controller/SignaturesController.php:58;83
+msgid "The signature could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PostsController.php:63;90
+msgid "The post has been saved."
+msgstr ""
+
+#: Controller/PostsController.php:66;93
+msgid "The post could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PostsController.php:113
+msgid "The post has been deleted."
+msgstr ""
+
+#: Controller/PostsController.php:115
+msgid "The post could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/SignaturesController.php:102
+msgid "The signature has been deleted."
+msgstr ""
+
+#: Controller/SignaturesController.php:104
+msgid "The signature could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:55;80
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:58;83
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:102
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:104
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Template/Auth/login.ctp:11
+msgid "password"
+msgstr ""
+
+#: Template/Auth/login.ctp:12
+#: Template/Layout/default.ctp:49
+#: Template/Users/view.ctp:38
+msgid "Login"
+msgstr ""
+
+#: Template/Blog/index.ctp:16
+#: Template/Blog/view.ctp:11
+msgid "Modification date:"
+msgstr ""
+
+#: Template/Blog/index.ctp:21
+#: Template/Blog/view.ctp:16
+msgid "Creation date:"
+msgstr ""
+
+#: Template/Blog/index.ctp:26
+#: Template/Blog/view.ctp:21
+msgid "Author:"
+msgstr ""
+
+#: Template/Blog/index.ctp:35
+msgid "Read more"
+msgstr ""
+
+#: Template/Blog/index.ctp:45
+#: Template/Petition/index.ctp:50
+#: Template/Posts/index.ctp:60
+#: Template/Signatures/index.ctp:56
+#: Template/Users/index.ctp:55
+msgid "previous"
+msgstr ""
+
+#: Template/Blog/index.ctp:46
+#: Template/Petition/index.ctp:51
+#: Template/Posts/index.ctp:61
+#: Template/Signatures/index.ctp:57
+#: Template/Users/index.ctp:56
+msgid "next"
+msgstr ""
+
+#: Template/Element/post-type-icon.ctp:2
+#: Template/Posts/edit.ctp:33
+#: Template/Posts/view.ctp:42
+msgid "Link"
+msgstr ""
+
+#: Template/Element/post-type-icon.ctp:4
+#: Template/Posts/edit.ctp:32
+msgid "Text"
+msgstr ""
+
+#: Template/Layout/default.ctp:36
+msgid "Petition"
+msgstr ""
+
+#: Template/Layout/default.ctp:38
+msgid "Sign"
+msgstr ""
+
+#: Template/Layout/default.ctp:40
+#: Template/Petition/index.ctp:24
+#: Template/Signatures/index.ctp:15
+msgid "Signatures"
+msgstr ""
+
+#: Template/Layout/default.ctp:41
+#: Template/Posts/index.ctp:17
+msgid "Posts"
+msgstr ""
+
+#: Template/Layout/default.ctp:42
+#: Template/Users/index.ctp:15
+msgid "Users"
+msgstr ""
+
+#: Template/Layout/default.ctp:47
+msgid "Logout"
+msgstr ""
+
+#: Template/Petition/index.ctp:5
+#: Template/Signatures/add.ctp:15
+msgid "Add Signature"
+msgstr ""
+
+#: Template/Petition/index.ctp:16
+#: Template/Posts/add.ctp:29
+#: Template/Posts/edit.ctp:48
+#: Template/Signatures/add.ctp:24
+#: Template/Signatures/edit.ctp:33
+#: Template/Users/add.ctp:23
+#: Template/Users/edit.ctp:31
+msgid "Submit"
+msgstr ""
+
+#: Template/Petition/index.ctp:30
+msgid "id"
+msgstr ""
+
+#: Template/Petition/index.ctp:31
+msgid "Name"
+msgstr ""
+
+#: Template/Posts/add.ctp:5
+#: Template/Posts/edit.ctp:5
+#: Template/Posts/index.ctp:5;30
+#: Template/Posts/view.ctp:5
+#: Template/Signatures/add.ctp:5
+#: Template/Signatures/edit.ctp:5
+#: Template/Signatures/index.ctp:5;27
+#: Template/Signatures/view.ctp:4
+#: Template/Users/add.ctp:5
+#: Template/Users/edit.ctp:5
+#: Template/Users/index.ctp:5;26
+#: Template/Users/view.ctp:5;64
+msgid "Actions"
+msgstr ""
+
+#: Template/Posts/add.ctp:8
+#: Template/Posts/edit.ctp:17
+#: Template/Posts/view.ctp:16
+msgid "List Posts"
+msgstr ""
+
+#: Template/Posts/add.ctp:9
+#: Template/Posts/edit.ctp:18
+#: Template/Posts/index.ctp:9
+#: Template/Users/add.ctp:8
+#: Template/Users/edit.ctp:16
+#: Template/Users/view.ctp:17
+msgid "List Users"
+msgstr ""
+
+#: Template/Posts/add.ctp:10
+#: Template/Posts/edit.ctp:19
+#: Template/Posts/index.ctp:10
+#: Template/Users/index.ctp:8
+#: Template/Users/view.ctp:18
+msgid "New User"
+msgstr ""
+
+#: Template/Posts/add.ctp:17
+msgid "Add Post"
+msgstr ""
+
+#: Template/Posts/add.ctp:25
+#: Template/Posts/edit.ctp:39
+msgid "Published"
+msgstr ""
+
+#: Template/Posts/add.ctp:26
+#: Template/Posts/edit.ctp:40
+msgid "Pinned"
+msgstr ""
+
+#: Template/Posts/add.ctp:27
+#: Template/Posts/edit.ctp:41
+msgid "Draft"
+msgstr ""
+
+#: Template/Posts/edit.ctp:9
+#: Template/Posts/index.ctp:47
+#: Template/Signatures/edit.ctp:9
+#: Template/Signatures/index.ctp:43
+#: Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:41
+#: Template/Users/view.ctp:78
+msgid "Delete"
+msgstr ""
+
+#: Template/Posts/edit.ctp:12
+#: Template/Posts/index.ctp:50
+#: Template/Posts/view.ctp:13
+#: Template/Signatures/edit.ctp:12
+#: Template/Signatures/index.ctp:46
+#: Template/Signatures/view.ctp:12
+#: Template/Users/edit.ctp:12
+#: Template/Users/index.ctp:45
+#: Template/Users/view.ctp:13;81
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Posts/edit.ctp:26
+#: Template/Posts/view.ctp:8
+msgid "Edit Post"
+msgstr ""
+
+#: Template/Posts/index.ctp:8
+#: Template/Posts/view.ctp:17
+msgid "New Post"
+msgstr ""
+
+#: Template/Posts/index.ctp:44
+#: Template/Signatures/index.ctp:40
+#: Template/Users/index.ctp:38
+#: Template/Users/view.ctp:75
+msgid "View"
+msgstr ""
+
+#: Template/Posts/index.ctp:45
+#: Template/Signatures/index.ctp:41
+#: Template/Users/index.ctp:39
+#: Template/Users/view.ctp:76
+msgid "Edit"
+msgstr ""
+
+#: Template/Posts/view.ctp:10
+msgid "Delete Post"
+msgstr ""
+
+#: Template/Posts/view.ctp:18
+msgid "View on site"
+msgstr ""
+
+#: Template/Posts/view.ctp:29
+#: Template/Signatures/view.ctp:27
+#: Template/Users/view.ctp:30;60
+msgid "Id"
+msgstr ""
+
+#: Template/Posts/view.ctp:33
+msgid "User"
+msgstr ""
+
+#: Template/Posts/view.ctp:37
+msgid "State"
+msgstr ""
+
+#: Template/Posts/view.ctp:47
+#: Template/Signatures/view.ctp:47
+#: Template/Users/view.ctp:46;62
+msgid "Created"
+msgstr ""
+
+#: Template/Posts/view.ctp:51
+#: Template/Users/view.ctp:63
+msgid "Modified"
+msgstr ""
+
+#: Template/Signatures/add.ctp:8
+#: Template/Signatures/edit.ctp:17
+#: Template/Signatures/view.ctp:15
+msgid "List Signatures"
+msgstr ""
+
+#: Template/Signatures/edit.ctp:24
+#: Template/Signatures/view.ctp:7
+msgid "Edit Signature"
+msgstr ""
+
+#: Template/Signatures/index.ctp:8
+#: Template/Signatures/view.ctp:16
+msgid "New Signature"
+msgstr ""
+
+#: Template/Signatures/index.ctp:37
+#: Template/Signatures/view.ctp:52
+msgid "Yes"
+msgstr ""
+
+#: Template/Signatures/index.ctp:37
+#: Template/Signatures/view.ctp:52
+msgid "No"
+msgstr ""
+
+#: Template/Signatures/view.ctp:9
+msgid "Delete Signature"
+msgstr ""
+
+#: Template/Signatures/view.ctp:31
+msgid "First Name"
+msgstr ""
+
+#: Template/Signatures/view.ctp:35
+msgid "Last Name"
+msgstr ""
+
+#: Template/Signatures/view.ctp:39
+#: Template/Users/view.ctp:42
+msgid "Email"
+msgstr ""
+
+#: Template/Signatures/view.ctp:43
+msgid "Comment"
+msgstr ""
+
+#: Template/Signatures/view.ctp:51
+msgid "Newsletter"
+msgstr ""
+
+#: Template/Users/edit.ctp:23
+#: Template/Users/view.ctp:8
+msgid "Edit User"
+msgstr ""
+
+#: Template/Users/view.ctp:10
+msgid "Delete User"
+msgstr ""
+
+#: Template/Users/view.ctp:34
+msgid "Display name"
+msgstr ""
+
+#: Template/Users/view.ctp:55
+msgid "Related Posts"
+msgstr ""
+
+#: Template/Users/view.ctp:61
+msgid "Title"
+msgstr ""
+
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr ""
+
+#: Template/Error/error400.ctp:38
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr ""
+
