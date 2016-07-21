@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-07-20 16:36+0200\n"
-"PO-Revision-Date: 2016-07-21 15:29+0200\n"
+"POT-Creation-Date: 2016-07-21 16:21+0200\n"
+"PO-Revision-Date: 2016-07-21 16:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -151,8 +151,13 @@ msgid "Submit"
 msgstr "Zatwierdź"
 
 #: Template/Petition/index.ctp:30
-msgid "id"
-msgstr "id"
+msgid "Identifier"
+msgstr "Numer porządkowy"
+
+#: Template/Petition/index.ctp:30 Template/Posts/view.ctp:29
+#: Template/Signatures/view.ctp:27 Template/Users/view.ctp:30;60
+msgid "Id"
+msgstr "Id"
 
 #: Template/Petition/index.ctp:31
 msgid "Name"
@@ -241,11 +246,6 @@ msgstr "Usuń Post"
 msgid "View on site"
 msgstr "Zobacz na stronie"
 
-#: Template/Posts/view.ctp:29 Template/Signatures/view.ctp:27
-#: Template/Users/view.ctp:30;60
-msgid "Id"
-msgstr "Id"
-
 #: Template/Posts/view.ctp:33
 msgid "User"
 msgstr "Użytkownik"
@@ -328,14 +328,14 @@ msgstr "Powiązane Posty"
 msgid "Title"
 msgstr "Tytuł"
 
-#: Template/Error/error400.ctp:36 Template/Error/error500.ctp:41
-msgid "Error"
-msgstr "Błąd"
+#~ msgid "id"
+#~ msgstr "id"
 
-#: Template/Error/error400.ctp:38
-msgid "The requested address %s was not found on this server."
-msgstr "Żądany adres %s nie został odnaleziony na serwerze."
+#~ msgid "Error"
+#~ msgstr "Błąd"
 
-#: Template/Error/error500.ctp:39
-msgid "An Internal Error Has Occurred"
-msgstr "Wystąpił błąd wewnętrzny"
+#~ msgid "The requested address %s was not found on this server."
+#~ msgstr "Żądany adres %s nie został odnaleziony na serwerze."
+
+#~ msgid "An Internal Error Has Occurred"
+#~ msgstr "Wystąpił błąd wewnętrzny"

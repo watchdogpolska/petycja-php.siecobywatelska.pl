@@ -27,7 +27,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col" class="col-xs-1"><?= __('Id') ?></th>
+                            <th scope="col" class="col-xs-1" ><span data-toggle="tooltip" title="<?= __('Identifier'); ?>"><?= __('Id') ?></span></th>
                             <th scope="col"><?= __('Name') ?></th>
                         </tr>
                     </thead>
@@ -55,3 +55,13 @@
         </div>
     </div>
 </div>
+<?php $this->append('script'); ?>
+<script>tinymce.init({ selector:'.tinymce' });</script>
+<script>
+    (function ($) {
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+    }) (jQuery)
+</script>
+<?php $this->end();?>

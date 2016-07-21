@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-07-20 14:34+0000\n"
+"POT-Creation-Date: 2016-07-21 14:20+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -168,7 +168,14 @@ msgid "Submit"
 msgstr ""
 
 #: Template/Petition/index.ctp:30
-msgid "id"
+msgid "Identifier"
+msgstr ""
+
+#: Template/Petition/index.ctp:30
+#: Template/Posts/view.ctp:29
+#: Template/Signatures/view.ctp:27
+#: Template/Users/view.ctp:30;60
+msgid "Id"
 msgstr ""
 
 #: Template/Petition/index.ctp:31
@@ -286,12 +293,6 @@ msgstr ""
 msgid "View on site"
 msgstr ""
 
-#: Template/Posts/view.ctp:29
-#: Template/Signatures/view.ctp:27
-#: Template/Users/view.ctp:30;60
-msgid "Id"
-msgstr ""
-
 #: Template/Posts/view.ctp:33
 msgid "User"
 msgstr ""
@@ -381,18 +382,5 @@ msgstr ""
 
 #: Template/Users/view.ctp:61
 msgid "Title"
-msgstr ""
-
-#: Template/Error/error400.ctp:36
-#: Template/Error/error500.ctp:41
-msgid "Error"
-msgstr ""
-
-#: Template/Error/error400.ctp:38
-msgid "The requested address %s was not found on this server."
-msgstr ""
-
-#: Template/Error/error500.ctp:39
-msgid "An Internal Error Has Occurred"
 msgstr ""
 
