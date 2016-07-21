@@ -8,7 +8,7 @@
             <div class="panel-body">
                 <?= $this->Form->create(null) ?>
                 <?= $this->Form->input('login'); ?>
-                <?= $this->Form->input(__('password')); ?>
+                <?= $this->Form->input('password', ['label' => __('Password')]); ?>
                 <?= $this->Form->button(__('Login')) ?>
                 <?= $this->Form->end() ?>
             </div>

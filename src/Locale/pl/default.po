@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-07-20 16:36+0200\n"
-"PO-Revision-Date: 2016-07-20 16:36+0200\n"
+"PO-Revision-Date: 2016-07-21 15:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
@@ -69,8 +69,8 @@ msgid "The user could not be deleted. Please, try again."
 msgstr "Nie można usunąć użytkownika. Proszę spróbować ponownie."
 
 #: Template/Auth/login.ctp:11
-msgid "password"
-msgstr "hasło"
+msgid "Password"
+msgstr "Hasło"
 
 #: Template/Auth/login.ctp:12 Template/Layout/default.ctp:49
 #: Template/Users/view.ctp:38

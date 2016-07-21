@@ -69,7 +69,7 @@ msgid "The user could not be deleted. Please, try again."
 msgstr ""
 
 #: Template/Auth/login.ctp:11
-msgid "password"
+msgid "Password"
 msgstr ""
 
 #: Template/Auth/login.ctp:12
