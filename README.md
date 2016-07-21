@@ -1,11 +1,11 @@
-# CakePHP Application Skeleton
+# Petycje-php.siecobywatelska.pl
 
-[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
-[![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
+[![Build Status](https://travis-ci.org/watchdogpolska/petycja-php.siecobywatelska.pl.svg?branch=master)](https://travis-ci.org/watchdogpolska/petycja-php.siecobywatelska.pl)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
-A skeleton for creating applications with [CakePHP](http://cakephp.org) 3.x.
+Aplikacji internetowa służąca do organizacji wydarzęń mających na celu wpływanie na działania organów publicznych do wykorzystania przez Stowrzyszenie oraz inne podmioty. Narzędzie to będzie służyć do wyrażania zdania społeczeństwa w sprawach istotnych, a takżę będzie centrum informacji na temat sprawy, a także składania petycji.
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+Aplikacja została zbudowana wykorzystując [CakePHP](http://cakephp.org) 3.x.
 
 ## Installation
 
@@ -24,3 +24,7 @@ the setup traffic lights.
 
 Read and edit `config/app.php` and setup the 'Datasources' and any other
 configuration relevant for your application.
+
+## Licence
+
+MIT
