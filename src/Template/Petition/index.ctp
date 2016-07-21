@@ -27,7 +27,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col" class="col-xs-1"><?= __('id') ?></th>
+                            <th scope="col" class="col-xs-1"><?= __('Id') ?></th>
                             <th scope="col"><?= __('Name') ?></th>
                         </tr>
                     </thead>
