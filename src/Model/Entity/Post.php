@@ -39,4 +39,20 @@ class Post extends Entity
         // Lte = Less or equal
         return $this->created->modify('+15 minutes')->lte($this->modified);
     }
+
+    public function stateToString()
+    {
+        switch(h($this->state))
+        {
+            case "Published":
+                return "Published";
+            case "Draft":
+                return "Draft";
+            case "Pinned":
+                return "Pinned";
+            default:
+             return "Unknown state ".$this->state;
+        }
+    }
+
 }
