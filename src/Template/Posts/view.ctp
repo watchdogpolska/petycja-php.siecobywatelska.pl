@@ -35,7 +35,7 @@
                 </tr>
                 <tr>
                     <th scole="row"><?= __('State') ?></th>
-                    <td><?= h(__($post->state)) ?></td>
+                    <td><?= $post->stateToString() ?></td>
                 </tr>
                 <?php if($post->type == 'link'): ?>
                     <tr>

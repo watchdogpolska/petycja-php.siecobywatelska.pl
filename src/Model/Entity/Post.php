@@ -42,16 +42,16 @@ class Post extends Entity
 
     public function stateToString()
     {
-        switch(h($this->state))
+        switch($this->state)
         {
-            case "Published":
-                return "Published";
-            case "Draft":
-                return "Draft";
-            case "Pinned":
-                return "Pinned";
+            case 'published':
+                return __('Published');
+            case 'draft':
+                return __('Draft');
+            case 'pinned':
+                return __('Pinned');
             default:
-             return "Unknown state ".$this->state;
+             return 'Unknown state: ' . $this->state;
         }
     }
 
