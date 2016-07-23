@@ -50,8 +50,9 @@ Router::scope('/auth', function (RouteBuilder $routes) {
 
 Router::scope('/petition', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Petition', 'action' => 'index'], ['_name' => 'petition.index']);
-    $routes->connect('/form', ['controller' => 'Petition', 'action' => 'add',], [ '_name' => 'petition.add']);
-    $routes->connect('/thank-you', ['controller' => 'Petition', 'action' => 'thank',], [ '_name' => 'petition.thank']);
+    $routes->connect('/form', ['controller' => 'Petition', 'action' => 'add'], ['_name' => 'petition.add']);
+    $routes->connect('/thank-you', ['controller' => 'Petition', 'action' => 'thank'], ['_name' => 'petition.thank']);
+    $routes->connect('/map-points', ['controller' => 'Petition', 'action' => 'mapPoints'], ['_name' => 'petition.map_point', '_ext' => ['json']]);
 });
 
 

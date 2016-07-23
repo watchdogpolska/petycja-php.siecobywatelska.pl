@@ -29,6 +29,7 @@
             <?= $this->Form->input('email'); ?>
             <?= $this->Form->input('first_name'); ?>
             <?= $this->Form->input('last_name'); ?>
+            <?= $this->Form->input('location'); ?>
             <?= $this->Form->input('newsletter'); ?>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>

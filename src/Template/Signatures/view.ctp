@@ -18,6 +18,21 @@
     </div>
 </nav>
 <div class="signatures view col-lg-9 col-md-8 columns content">
+    <?php if($signature->geo_lng && $signature->geo_lat): ?>
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Mapka</h3>
+        </div>
+        <div class="panel-body">
+            <div
+                id="map"
+                style="height: 400px"
+                data-lng="<?= h($signature->geo_lng) ?>"
+                data-lat="<?= h($signature->geo_lat) ?>">
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title"><?= h($signature->first_name) ?> <?= h($signature->last_name) ?></h3>
@@ -54,3 +69,19 @@
         </table>
     </div>
 </div>
+<?php
+$this->Html->script('/js/map-point.js', [
+    'block' => true
+]);
+?>
+<?php $this->append('script'); ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoPxTl-O2LzNrwJBQC8gwULYkxRMIxlHs&callback=init_map"
+async defer></script>
+<script>
+    (function ($) {
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+    }) (jQuery)
+</script>
+<?php $this->end();?>

@@ -1,4 +1,16 @@
 <div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Mapa</h3>
+            </div>
+            <div class="panel-body">
+                <div id="map" style="height: 400px"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
     <div class="col-lg-4 col-md-6 columns">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -13,6 +25,7 @@
                 <?= $this->Form->input('email'); ?>
                 <?= $this->Form->textarea('comment'); ?>
                 <?= $this->Form->input('newsletter'); ?>
+                <?= $this->Form->input('location'); ?>
                 <?= $this->Form->button(__('Submit')) ?>
                 <?= $this->Form->end() ?>
             </div>
@@ -55,8 +68,14 @@
         </div>
     </div>
 </div>
+<?php
+$this->Html->script('/js/map-points.js', [
+    'block' => true
+]);
+?>
 <?php $this->append('script'); ?>
-<script>tinymce.init({ selector:'.tinymce' });</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoPxTl-O2LzNrwJBQC8gwULYkxRMIxlHs&callback=init_map"
+async defer></script>
 <script>
     (function ($) {
         $(function () {

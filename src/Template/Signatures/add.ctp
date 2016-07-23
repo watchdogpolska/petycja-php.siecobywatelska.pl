@@ -20,6 +20,7 @@
                 <?= $this->Form->input('last_name'); ?>
                 <?= $this->Form->input('email'); ?>
                 <?= $this->Form->textarea('comment'); ?>
+                <?= $this->Form->input('location'); ?>
                 <?= $this->Form->input('newsletter'); ?>
                 <?= $this->Form->button(__('Submit')) ?>
                 <?= $this->Form->end() ?>

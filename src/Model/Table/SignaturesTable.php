@@ -37,6 +37,7 @@ class SignaturesTable extends Table
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Geocode', ['field' => 'location']);
     }
 
     /**

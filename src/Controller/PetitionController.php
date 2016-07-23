@@ -23,6 +23,7 @@ class PetitionController extends AppController
         parent::initialize();
         $this->Auth->allow();
         $this->loadModel('Signatures');
+        $this->loadComponent('RequestHandler');
     }
 
     /**
@@ -62,11 +63,22 @@ class PetitionController extends AppController
     /**
      * Add method
      *
-     * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
     public function thank()
     {
 
+    }
+
+    /**
+     * Map points method
+     *
+     */
+    public function mapPoints()
+    {
+        $this->RequestHandler->renderAs($this, 'json');
+        $points = $this->Signatures->find('geocoded')->select(['geo_lat', 'geo_lng']);
+        $this->set(compact('points'));
+        $this->set('_serialize', ['points']);
     }
 
 
