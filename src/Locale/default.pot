@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-07-21 14:20+0000\n"
+"POT-Creation-Date: 2016-07-23 18:16+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -68,6 +68,24 @@ msgstr ""
 msgid "The user could not be deleted. Please, try again."
 msgstr ""
 
+#: Model/Entity/Post.php:48
+#: Template/Posts/add.ctp:25
+#: Template/Posts/edit.ctp:39
+msgid "Published"
+msgstr ""
+
+#: Model/Entity/Post.php:50
+#: Template/Posts/add.ctp:27
+#: Template/Posts/edit.ctp:41
+msgid "Draft"
+msgstr ""
+
+#: Model/Entity/Post.php:52
+#: Template/Posts/add.ctp:26
+#: Template/Posts/edit.ctp:40
+msgid "Pinned"
+msgstr ""
+
 #: Template/Auth/login.ctp:11
 msgid "Password"
 msgstr ""
@@ -114,12 +132,14 @@ msgid "next"
 msgstr ""
 
 #: Template/Element/post-type-icon.ctp:2
+#: Template/Posts/add.ctp:31
 #: Template/Posts/edit.ctp:33
 #: Template/Posts/view.ctp:42
 msgid "Link"
 msgstr ""
 
 #: Template/Element/post-type-icon.ctp:4
+#: Template/Posts/add.ctp:30
 #: Template/Posts/edit.ctp:32
 msgid "Text"
 msgstr ""
@@ -158,7 +178,7 @@ msgid "Add Signature"
 msgstr ""
 
 #: Template/Petition/index.ctp:16
-#: Template/Posts/add.ctp:29
+#: Template/Posts/add.ctp:35
 #: Template/Posts/edit.ctp:48
 #: Template/Signatures/add.ctp:24
 #: Template/Signatures/edit.ctp:33
@@ -224,19 +244,12 @@ msgstr ""
 msgid "Add Post"
 msgstr ""
 
-#: Template/Posts/add.ctp:25
-#: Template/Posts/edit.ctp:39
-msgid "Published"
+#: Template/Posts/add.ctp:33
+msgid "Type"
 msgstr ""
 
-#: Template/Posts/add.ctp:26
-#: Template/Posts/edit.ctp:40
-msgid "Pinned"
-msgstr ""
-
-#: Template/Posts/add.ctp:27
-#: Template/Posts/edit.ctp:41
-msgid "Draft"
+#: Template/Posts/add.ctp:34
+msgid "Link Target"
 msgstr ""
 
 #: Template/Posts/edit.ctp:9
@@ -382,5 +395,18 @@ msgstr ""
 
 #: Template/Users/view.ctp:61
 msgid "Title"
+msgstr ""
+
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr ""
+
+#: Template/Error/error400.ctp:38
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
 msgstr ""
 

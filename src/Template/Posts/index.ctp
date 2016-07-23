@@ -37,7 +37,7 @@
                             <td><?= $this->Number->format($post->id) ?></td>
                             <td><?= h($post->title) ?></td>
                             <td><?= $post->has('user') ? $this->Html->link($post->user->display_name, ['controller' => 'Users', 'action' => 'view', $post->user->id]) : '' ?></td>
-                            <td><?= __($post->stateToString()) ?></td>
+                            <td><?= $post->stateToString() ?></td>
                             <td><?= h($post->created) ?></td>
                             <td><?= h($post->modified) ?></td>
                             <td class="actions">

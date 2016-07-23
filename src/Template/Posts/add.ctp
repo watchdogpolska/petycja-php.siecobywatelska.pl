@@ -26,6 +26,12 @@
                     'pinned' => __('Pinned'),
                     'draft' => __('Draft')
                 ], 'empty' => false]); ?>
+                <?= $this->Form->input('type', ['options' => [
+                    'text' => __('Text'),
+                    'link' => __('Link')
+                ], 'empty' => false,
+                    'label' => __('Type')]); ?>
+                <?= $this->Form->input('link_target', ['label' => __('Link Target')]); ?>
                 <?= $this->Form->button(__('Submit')) ?>
                 <?= $this->Form->end() ?>
             </div>
