@@ -39,7 +39,12 @@ class BlogController extends AppController
 
     public function view()
     {
-        $id = $this->request->params['pass'];
+        if(empty($this->request->params['slug'])) {
+            $id = $this->request->params['pass'];
+        }
+        else {
+            $id = $this->request->params['id'];
+        }
 
         $post = $this->Posts->get($id, [
             'finder' => 'visible',

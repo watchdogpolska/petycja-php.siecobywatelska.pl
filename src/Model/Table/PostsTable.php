@@ -39,6 +39,9 @@ class PostsTable extends Table
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Muffin/Slug.Slug', [
+            'displayField' => 'title'
+         ]);
 
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id'

@@ -6,7 +6,7 @@
                 <div class="panel-heading">
                     <h2 class="panel-title">
                         <?= $this->element('post-type-icon', ['post' => $post]); ?>
-                        <?= $this->Html->link($post->title, ['action' => 'view', $post->id]) ?>
+                        <?= $this->Html->link($post->title, ['action' => 'view', $post->id, $post->slug]) ?>
                     </h2>
                 </div>
                 <table class="table table-hover">
@@ -33,7 +33,7 @@
                     <?php
                     $link_more = $this->Html->link(
                         __('Read more') . ' <span class="sr-only">' . h($post->title) . '</span>' ,
-                        ['action' => 'view', $post->id],
+                        ['action' => 'view', $post->slug, $post->id],
                         ['escape' => false]); ?>
                     <?= $this->Text->truncate($post->content, 255, ['exact' => false, 'ellipsis' => ' ' . $link_more]) ?>
 
