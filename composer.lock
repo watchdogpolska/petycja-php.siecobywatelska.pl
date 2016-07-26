@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d230077eef4f2252a840a22921564576",
-    "content-hash": "e8deba42efb7a74d3c9b90f0bf1e6d71",
+    "hash": "2e72026ea4b94bc7db4408990be0ca1d",
+    "content-hash": "76859f8bd2a7b26228c3549c0a8dc065",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -444,13 +444,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Holt59/cakephp3-bootstrap-helpers.git",
-                "reference": "0fc33eb2fb397b8f3867a6eda5aebdfecc7bc325"
+                "url": "https://github.com/mik-laj/cakephp3-bootstrap-helpers.git",
+                "reference": "8a91dd8b6b56f2088e693529e30e0cd0053ed3aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Holt59/cakephp3-bootstrap-helpers/zipball/0fc33eb2fb397b8f3867a6eda5aebdfecc7bc325",
-                "reference": "0fc33eb2fb397b8f3867a6eda5aebdfecc7bc325",
+                "url": "https://api.github.com/repos/mik-laj/cakephp3-bootstrap-helpers/zipball/8a91dd8b6b56f2088e693529e30e0cd0053ed3aa",
+                "reference": "8a91dd8b6b56f2088e693529e30e0cd0053ed3aa",
                 "shasum": ""
             },
             "require": {
@@ -469,16 +469,23 @@
                     "Bootstrap\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Bootstrap\\Test\\": "tests"
+                }
+            },
             "license": [
                 "Apache"
             ],
             "description": "Bootstrap Helpers for CakePHP 3.0",
             "keywords": [
-                "bootstrap",
-                "cakephp"
+                "Bootstrap",
+                "CakePHP"
             ],
-            "time": "2016-07-17 10:53:13"
+            "support": {
+                "source": "https://github.com/mik-laj/cakephp3-bootstrap-helpers/tree/master"
+            },
+            "time": "2016-07-26 16:11:09"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
