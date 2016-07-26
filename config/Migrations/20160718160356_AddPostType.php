@@ -30,4 +30,3 @@ class AddPostType extends AbstractMigration
             ->update();
     }
 }
-

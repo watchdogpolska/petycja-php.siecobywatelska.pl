@@ -22,6 +22,11 @@ class BlogController extends AppController
         ]
     ];
 
+    /**
+     * {@inheritdoc}
+     *
+     * @return void
+     */
     public function initialize()
     {
         parent::initialize();
@@ -29,6 +34,11 @@ class BlogController extends AppController
         $this->loadModel('Posts');
     }
 
+    /**
+     * Index method
+     *
+     * @return void
+     */
     public function index()
     {
         $posts = $this->paginate($this->Posts);
@@ -37,6 +47,12 @@ class BlogController extends AppController
         $this->set('_serialize', ['posts']);
     }
 
+    /**
+     * View method
+     *
+     * @param string $slug Post slug
+     * @return \Cake\Network\Response|void
+     */
     public function view($slug)
     {
         $post = $this->Posts->find('slugged', ['slug' => $slug])

@@ -79,7 +79,7 @@ class PostsTable extends Table
 
         $validator
             ->requirePresence('link_target', 'create')
-            ->allowEmpty('link_target', function($context) {
+            ->allowEmpty('link_target', function ($context) {
                 return $context && $context['data'] && $context['data']['type'] != 'link';
             });
 
@@ -96,9 +96,17 @@ class PostsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['user_id'], 'Users'));
+
         return $rules;
     }
 
+    /**
+     * Finder that allow display only visible for normal posts (ex. will hide draft posts)
+     *
+     * @param \Cake\ORM\Query $query Query that will be filtered.
+     * @param array $options Options.
+     * @return \Cake\ORM\Query
+     */
     public function findVisible(Query $query, array $options)
     {
         return $query->where(['Posts.state IN' => ['pinned', 'published']]);

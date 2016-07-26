@@ -18,6 +18,11 @@ class PetitionController extends AppController
         ]
     ];
 
+    /**
+     * {@inheritdoc}
+     *
+     * @return void
+     */
     public function initialize()
     {
         parent::initialize();
@@ -29,7 +34,7 @@ class PetitionController extends AppController
     /**
      * Index method
      *
-     * @return \Cake\Network\Response|null
+     * @return void
      */
     public function index()
     {
@@ -37,13 +42,24 @@ class PetitionController extends AppController
         $this->add();
     }
 
-    public function listSignature(){
+    /**
+     * List of signatures method
+     *
+     * @return void
+     */
+    public function listSignature()
+    {
         $signatures = $this->paginate($this->Signatures);
 
         $this->set(compact('signatures'));
         $this->set('_serialize', ['signatures']);
     }
 
+    /**
+     * Add method
+     *
+     * @return \Cake\Network\Response|void
+     */
     public function add()
     {
         $signature = $this->Signatures->newEntity();
@@ -51,6 +67,7 @@ class PetitionController extends AppController
             $petition = $this->Signatures->patchEntity($signature, $this->request->data);
             if ($this->Signatures->save($signature)) {
                 $this->Flash->success(__('The signature has been saved.'));
+
                 return $this->redirect(['action' => 'thank']);
             } else {
                 $this->Flash->error(__('The signature could not be saved. Please, try again.'));
@@ -61,25 +78,26 @@ class PetitionController extends AppController
     }
 
     /**
-     * Add method
+     * Thank you method
      *
+     * @return void
      */
     public function thank()
     {
-
     }
 
     /**
      * Map points method
      *
+     * @return void
      */
     public function mapPoints()
     {
         $this->RequestHandler->renderAs($this, 'json');
+
         $points = $this->Signatures->find('geocoded')->select(['geo_lat', 'geo_lng']);
+
         $this->set(compact('points'));
         $this->set('_serialize', ['points']);
     }
-
-
 }

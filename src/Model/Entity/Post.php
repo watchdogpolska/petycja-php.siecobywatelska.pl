@@ -35,15 +35,25 @@ class Post extends Entity
         'id' => false
     ];
 
-    public function isHasBennModifited(){
+    /**
+     * Allow check that the post was modified ever.
+     *
+     * @return bool
+     */
+    public function isHasBennModifited()
+    {
         // Lte = Less or equal
         return $this->created->modify('+15 minutes')->lte($this->modified);
     }
 
+    /**
+     * Transform a state to translated form
+     *
+     * @return string
+     */
     public function stateToString()
     {
-        switch($this->state)
-        {
+        switch ($this->state) {
             case 'published':
                 return __('Published');
             case 'draft':
@@ -51,8 +61,7 @@ class Post extends Entity
             case 'pinned':
                 return __('Pinned');
             default:
-             return 'Unknown state: ' . $this->state;
+                return 'Unknown state: ' . $this->state;
         }
     }
-
 }

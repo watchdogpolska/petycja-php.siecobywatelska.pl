@@ -6,7 +6,6 @@ class AlterAllowCommentToBeEmpty extends AbstractMigration
 
     public function up()
     {
-
         $this->table('signatures')
             ->changeColumn('comment', 'string', [
                 'null' => true,
@@ -16,7 +15,6 @@ class AlterAllowCommentToBeEmpty extends AbstractMigration
 
     public function down()
     {
-
         $this->table('signatures')
             ->changeColumn('comment', 'string', [
                 'default' => null,
@@ -26,4 +24,3 @@ class AlterAllowCommentToBeEmpty extends AbstractMigration
             ->update();
     }
 }
-

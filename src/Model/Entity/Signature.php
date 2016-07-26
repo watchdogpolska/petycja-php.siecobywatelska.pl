@@ -31,6 +31,11 @@ class Signature extends Entity
         'id' => false
     ];
 
+    /**
+     * Return full name (concated first nad last name)
+     *
+     * @return string
+     */
     protected function _getName()
     {
         return $this->_properties['first_name'] . '  ' .

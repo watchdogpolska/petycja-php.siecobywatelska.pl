@@ -77,7 +77,7 @@ class AppController extends Controller
               'controller' => 'Auth',
               'action' => 'login'
             ],
-            'unauthorizedRedirect'=>$this->referer()
+            'unauthorizedRedirect' => $this->referer()
 
         ]);
     }

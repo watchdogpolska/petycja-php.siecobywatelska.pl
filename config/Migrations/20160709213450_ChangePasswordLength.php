@@ -6,7 +6,6 @@ class ChangePasswordLength extends AbstractMigration
 
     public function up()
     {
-
         $this->table('users')
             ->changeColumn('password', 'string', [
                 'length' => 255,
@@ -16,7 +15,6 @@ class ChangePasswordLength extends AbstractMigration
 
     public function down()
     {
-
         $this->table('users')
             ->changeColumn('password', 'string', [
                 'default' => null,
@@ -26,4 +24,3 @@ class ChangePasswordLength extends AbstractMigration
             ->update();
     }
 }
-

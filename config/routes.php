@@ -45,7 +45,7 @@ Router::defaultRouteClass('DashedRoute');
 
 Router::scope('/auth', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Auth', 'action' => 'login'], ['_name' => 'auth.login']);
-    $routes->connect('/logout', ['controller' => 'Auth', 'action' => 'logout',], [ '_name' => 'auth.logout']);
+    $routes->connect('/logout', ['controller' => 'Auth', 'action' => 'logout', ], [ '_name' => 'auth.logout']);
 });
 
 Router::scope('/petition', function (RouteBuilder $routes) {
@@ -55,7 +55,7 @@ Router::scope('/petition', function (RouteBuilder $routes) {
     $routes->connect('/map-points', ['controller' => 'Petition', 'action' => 'mapPoints'], ['_name' => 'petition.map_point', '_ext' => ['json']]);
 });
 
-Router::scope('/admin', function (RouteBuilder $routes){
+Router::scope('/admin', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'posts', 'action' => 'index']);
     $routes->connect('/posts', ['controller' => 'posts', 'action' => 'index']);
     $routes->connect('/signatures', ['controller' => 'signatures', 'action' => 'index']);
@@ -65,7 +65,7 @@ Router::scope('/admin', function (RouteBuilder $routes){
     $routes->connect('/posts/:action/*', ['controller' => 'posts']);
 });
 
-Router::scope('/', function (RouteBuilder $routes){
+Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Blog', 'action' => 'index']);
     $routes->connect('/blog/:slug/', ['controller' => 'Blog', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z\-]+']);
 

@@ -39,4 +39,3 @@ class AddLocationFieldToStgnature extends AbstractMigration
             ->update();
     }
 }
-

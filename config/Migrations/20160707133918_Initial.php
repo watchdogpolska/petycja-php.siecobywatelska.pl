@@ -8,7 +8,6 @@ class Initial extends AbstractMigration
 
     public function up()
     {
-
         $this->table('posts')
             ->addColumn('id', 'integer', [
                 'autoIncrement' => true,

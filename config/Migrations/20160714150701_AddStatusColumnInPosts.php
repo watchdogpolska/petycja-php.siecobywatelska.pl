@@ -25,13 +25,13 @@ class AddStatusColumnInPosts extends AbstractMigration
      * Remember to call "create()" or "update()" and NOT "save()" when working
      * with the Table class.
      */
-     public function change()
-     {
-         $this->table('posts')
-         ->addColumn('state', 'enum', [
-             'default' => null,
-             'values' => ['published', 'pinned', 'draft'],
-             'null' => false,
-         ])->update();
-     }
+    public function change()
+    {
+        $this->table('posts')
+        ->addColumn('state', 'enum', [
+           'default' => null,
+           'values' => ['published', 'pinned', 'draft'],
+           'null' => false,
+        ])->update();
+    }
 }

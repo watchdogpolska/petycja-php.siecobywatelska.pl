@@ -23,7 +23,7 @@ class PostsSeed extends AbstractSeed
         $faker = Faker\Factory::create();
         $data = [];
 
-        for ($i=0; $i < 100; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $data[] = [
                 'title' => $faker->sentence(5, true),
                 'content' => '<p>' . implode('</p><p>', $faker->paragraphs(rand(3, 20), false)) . '</p>',

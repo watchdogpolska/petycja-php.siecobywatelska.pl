@@ -1,9 +1,8 @@
 <?php
 namespace App\Controller;
 
-use Cake\Event\Event;
-
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Auth Controller
@@ -11,16 +10,23 @@ use App\Controller\AppController;
  */
 class AuthController extends AppController
 {
-    var $Auth = false;
+    public $Auth = false;
 
+    /**
+     * {@inheritdoc}
+     *
+     * @param \Cake\Event\Event $event {@inheritdoc}
+     * @return void
+     */
     public function beforeFilter(Event $event)
     {
         $this->Auth->allow(['login']);
     }
+
     /**
      * Login method
      *
-     * @return \Cake\Network\Response|null
+     * @return \Cake\Network\Response|void
      */
     public function login()
     {
@@ -28,6 +34,7 @@ class AuthController extends AppController
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
+
                 return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error(__('Invalid username or password, try again'));
@@ -35,7 +42,7 @@ class AuthController extends AppController
     }
 
     /**
-     * Login method
+     * Logout method
      *
      * @return \Cake\Network\Response|null
      */
@@ -43,5 +50,4 @@ class AuthController extends AppController
     {
         return $this->redirect($this->Auth->logout());
     }
-
 }

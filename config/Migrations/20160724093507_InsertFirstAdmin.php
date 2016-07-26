@@ -1,12 +1,12 @@
 <?php
-use Migrations\AbstractMigration;
 use Cake\Auth\DefaultPasswordHasher;
+use Migrations\AbstractMigration;
 
 class InsertFirstAdmin extends AbstractMigration
 {
    /**
-     * Migrate Up.
-     */
+    * Migrate Up.
+    */
     public function up()
     {
         $hasher = new DefaultPasswordHasher();

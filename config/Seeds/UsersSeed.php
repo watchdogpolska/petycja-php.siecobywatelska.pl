@@ -1,6 +1,7 @@
 <?php
-use Migrations\AbstractSeed;
 use Cake\Auth\DefaultPasswordHasher;
+use Migrations\AbstractSeed;
+
 /**
  * Users seed.
  */
@@ -19,7 +20,8 @@ class UsersSeed extends AbstractSeed
     public function run()
     {
         $hasher = new DefaultPasswordHasher();
-        $faker = $faker = Faker\Factory::create();;
+        $faker = $faker = Faker\Factory::create();
+        ;
         $data = [
             [
                 'login' => 'user1',
@@ -41,7 +43,7 @@ class UsersSeed extends AbstractSeed
             ]
         ];
 
-        for ($i=0; $i < 20; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             $data[] = [
                 'login' => $faker->lastName . $faker->numberBetween(1, 5555),
                 'email' => $faker->safeEmail,

@@ -13,7 +13,7 @@ class AddSlugColumn extends AbstractMigration
     public function change()
     {
         $this->table('posts')
-        ->addColumn('slug', 'string',[
+        ->addColumn('slug', 'string', [
             'limit' => '255',
             'null' => 'false'
         ])->update();

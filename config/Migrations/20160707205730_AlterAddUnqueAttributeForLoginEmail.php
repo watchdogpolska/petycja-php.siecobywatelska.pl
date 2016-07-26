@@ -12,4 +12,3 @@ class AlterAddUnqueAttributeForLoginEmail extends AbstractMigration
     {
     }
 }
-

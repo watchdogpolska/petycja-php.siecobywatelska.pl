@@ -14,7 +14,7 @@ class SignaturesController extends AppController
     /**
      * Index method
      *
-     * @return \Cake\Network\Response|null
+     * @return void
      */
     public function index()
     {
@@ -28,7 +28,7 @@ class SignaturesController extends AppController
      * View method
      *
      * @param string|null $id Signature id.
-     * @return \Cake\Network\Response|null
+     * @return void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null)
@@ -53,6 +53,7 @@ class SignaturesController extends AppController
             $signature = $this->Signatures->patchEntity($signature, $this->request->data);
             if ($this->Signatures->save($signature)) {
                 $this->Flash->success(__('The signature has been saved.'));
+
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The signature could not be saved. Please, try again.'));
@@ -78,6 +79,7 @@ class SignaturesController extends AppController
             $signature = $this->Signatures->patchEntity($signature, $this->request->data);
             if ($this->Signatures->save($signature)) {
                 $this->Flash->success(__('The signature has been saved.'));
+
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The signature could not be saved. Please, try again.'));
@@ -103,6 +105,7 @@ class SignaturesController extends AppController
         } else {
             $this->Flash->error(__('The signature could not be deleted. Please, try again.'));
         }
+
         return $this->redirect(['action' => 'index']);
     }
 }

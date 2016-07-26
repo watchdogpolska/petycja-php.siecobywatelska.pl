@@ -19,7 +19,7 @@ class AddUserIdToPosts extends AbstractMigration
                   'null' => true
               ])
               ->addIndex(['user_id'], ['name' => 'fk_posts_users_idx'])
-              ->addForeignKey('user_id', 'users', 'id', ['delete'=> 'SET_NULL', 'update'=> 'NO_ACTION'])
+              ->addForeignKey('user_id', 'users', 'id', ['delete' => 'SET_NULL', 'update' => 'NO_ACTION'])
               ->save();
     }
 }
