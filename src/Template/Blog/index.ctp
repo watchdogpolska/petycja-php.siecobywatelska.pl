@@ -33,7 +33,7 @@
                     <?php
                     $link_more = $this->Html->link(
                         __('Read more') . ' <span class="sr-only">' . h($post->title) . '</span>' ,
-                        ['action' => 'view', $post->id, $post->slug],
+                        ['action' => 'view', $post->slug],
                         ['escape' => false]); ?>
                     <?= $this->Text->truncate($post->content, 255, ['exact' => false, 'ellipsis' => ' ' . $link_more]) ?>
 
