@@ -5,14 +5,17 @@
                 <div class="panel-title"><?= __('Actions') ?></div>
             </div>
             <div class="list-group">
-                <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('list') . ' ' . __('List Users'),
+                        ['action' => 'index'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
             </div>
         </div>
     </nav>
     <div class="col-lg-9 col-md-8 columns content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title">Add user</h2>
+                <h2 class="panel-title"><?= $this->Html->icon('user') ?> <?= __('Add user') ?></h2>
             </div>
             <div class="panel-body">
                 <?= $this->Form->create($user, ['horizontal' => true]) ?>

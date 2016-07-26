@@ -5,17 +5,30 @@
                 <div class="panel-title"><?= __('Actions') ?></div>
             </div>
             <div class="list-group">
-                <?= $this->Html->link(__('Edit Post'), ['action' => 'edit', $post->id], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('pencil') . ' ' . __('Edit Post'),
+                        ['action' => 'edit', $post->id],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
                 <?= $this->Form->postLink(
-                    __('Delete Post'),
-                    ['action' => 'delete', $post->id],
-                    [
-                        'confirm' => __('Are you sure you want to delete # {0}?', $post->id),
-                        'class' => 'list-group-item'
-                    ]) ?>
-                <?= $this->Html->link(__('List Posts'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
-                <?= $this->Html->link(__('New Post'), ['action' => 'add'], ['class' => 'list-group-item']) ?>
-                <?= $this->Html->link(__('View on site'), ['controller' => 'blog', 'action' => 'view', $post->id], ['class' => 'list-group-item']) ?>
+                        $this->Html->icon('trash') . ' ' . __('Delete Post'),
+                        ['action' => 'delete', $post->id],
+                        [
+                            'escape' => false,
+                            'confirm' => __('Are you sure you want to delete # {0}?', $post->id),
+                            'class' => 'list-group-item'
+                        ]) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('list') . ' ' . __('List Posts'),
+                        ['action' => 'index'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('plus') . ' ' . __('New Post'),
+                        ['action' => 'add'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('globe') . ' ' . __('View on site'),
+                        ['controller' => 'blog', 'action' => 'view', $post->id],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
             </div>
         </div>
     </div>

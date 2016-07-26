@@ -5,14 +5,17 @@
                 <div class="panel-title"><?= __('Actions') ?></div>
             </div>
             <div class="list-group">
-                <?= $this->Html->link(__('List Signatures'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('list') . ' ' . __('List Signatures'),
+                        ['action' => 'index'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
             </div>
         </div>
     </nav>
     <div class="signatures form col-lg-9 col-md-8 content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title"><?= __('Add Signature') ?></h2>
+                <h2 class="panel-title"><?= $this->Html->icon('pencil'); ?> <?= __('Add Signature') ?></h2>
             </div>
             <div class="panel-body">
                 <?= $this->Form->create($signature, ['horizontal' => true]) ?>

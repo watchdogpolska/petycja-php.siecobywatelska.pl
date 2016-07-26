@@ -5,14 +5,17 @@
                 <h2 class="panel-title"><?= __('Actions') ?></h2>
             </div>
             <div class="list-group">
-                <?= $this->Html->link(__('New Signature'), ['action' => 'add'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('plus') . ' ' . __('New Signature'),
+                        ['action' => 'add'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
             </div>
         </div>
     </nav>
     <div class="signatures index col-lg-9 col-md-8 columns content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title"><?= __('Signatures') ?></h2>
+                <h2 class="panel-title"><?= $this->Html->icon('pencil'); ?> <?= __('Signatures') ?></h2>
             </div>
             <div class="panel-body">
                 <table class="table table-hover">
@@ -37,14 +40,15 @@
                             <td><?= $signature->newsletter ? __('Yes') : __('No') ?></td>
                             <td><?= h($signature->created) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['action' => 'view', $signature->id], ['class' => 'btn btn-default']) ?>
-                                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $signature->id], ['class' => 'btn btn-default']) ?>
+                                <?= $this->Html->link($this->Html->icon('eye'), ['action' => 'view', $signature->id], ['escape' => false, 'class' => 'btn btn-default', 'title' => __('View')]) ?>
+                                <?= $this->Html->link($this->Html->icon('pencil'), ['action' => 'edit', $signature->id], ['escape' => false, 'class' => 'btn btn-default', 'title' => __('Edit')]) ?>
                                 <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['action' => 'delete', $signature->id],
+                                    $this->Html->icon('trash'), ['action' => 'delete', $signature->id],
                                     [
+                                        'escape' => false,
                                         'confirm' => __('Are you sure you want to delete # {0}?', $signature->id),
-                                        'class' => 'btn btn-danger'
+                                        'class' => 'btn btn-danger',
+                                        'title' => __('Delete')
                                     ]) ?>
                             </td>
                         </tr>

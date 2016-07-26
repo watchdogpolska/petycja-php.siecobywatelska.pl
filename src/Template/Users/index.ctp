@@ -5,14 +5,17 @@
                 <div class="panel-title"><?= __('Actions') ?></div>
             </div>
             <div class="list-group">
-                <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class'=>'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('plus') . ' ' . __('New User'),
+                        ['action' => 'add'],
+                        ['escape' => false, 'class'=>'list-group-item']) ?>
             </div>
         </div>
     </nav>
     <div class="users index col-lg-9 col-md-8 content">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title"><?= __('Users') ?></h2>
+                <h2 class="panel-title"><?= $this->Html->icon('users') ?> <?= __('Users') ?></h2>
             </div>
             <div class="panel-body">
                 <table class="table table-hover">
@@ -35,16 +38,16 @@
                             <td><?= h($user->email) ?></td>
                             <td><?= h($user->created) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['action' => 'view', $user->id], ['class' =>'btn btn-default']) ?>
-                                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], ['class' =>'btn btn-default']) ?>
+                                <?= $this->Html->link($this->Html->icon('eye'), ['action' => 'view', $user->id], ['escape' => false, 'class' => 'btn btn-default', 'title' => __('View')]) ?>
+                                <?= $this->Html->link($this->Html->icon('pencil'), ['action' => 'edit', $user->id], ['escape' => false, 'class' => 'btn btn-default', 'title' => __('Edit')]) ?>
                                 <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['action' => 'delete', $user->id],
+                                    $this->Html->icon('trash'), ['action' => 'delete', $user->id],
                                     [
+                                        'escape' => false,
+                                        'confirm' => __('Are you sure you want to delete # {0}?', $user->id),
                                         'class' => 'btn btn-danger',
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $user->id)
-                                    ])
-                                ?>
+                                        'title' => __('Delete')
+                                    ]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

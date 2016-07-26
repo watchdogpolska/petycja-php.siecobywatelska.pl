@@ -4,16 +4,26 @@
             <h3 class="panel-title"><?= __('Actions') ?></h3>
         </div>
         <div class="list-group">
-            <?= $this->Html->link(__('Edit Signature'), ['action' => 'edit', $signature->id], ['class' => 'list-group-item']) ?>
+            <?= $this->Html->link(
+                    $this->Html->icon('pencil') . ' ' . __('Edit Signature'),
+                    ['action' => 'edit', $signature->id],
+                    ['escape' => false, 'class' => 'list-group-item']) ?>
             <?= $this->Form->postLink(
-                __('Delete Signature'),
-                ['action' => 'delete', $signature->id],
-                [
-                    'confirm' => __('Are you sure you want to delete # {0}?', $signature->id),
-                    'class' => 'list-group-item'
-                ]) ?>
-            <?= $this->Html->link(__('List Signatures'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
-            <?= $this->Html->link(__('New Signature'), ['action' => 'add'], ['class' => 'list-group-item']) ?>
+                    $this->Html->icon('trash') . ' ' . __('Delete Signature'),
+                    ['action' => 'delete', $signature->id],
+                    [
+                        'escape' => false,
+                        'confirm' => __('Are you sure you want to delete # {0}?', $signature->id),
+                        'class' => 'list-group-item'
+                    ]) ?>
+            <?= $this->Html->link(
+                    $this->Html->icon('list') . ' ' . __('List Signatures'),
+                    ['action' => 'index'],
+                    ['escape' => false, 'class' => 'list-group-item']) ?>
+            <?= $this->Html->link(
+                    $this->Html->icon('plus') . ' ' . __('New Signature'),
+                    ['action' => 'add'],
+                    ['escape' => false, 'class' => 'list-group-item']) ?>
         </div>
     </div>
 </nav>
@@ -35,7 +45,7 @@
     <?php endif; ?>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><?= h($signature->first_name) ?> <?= h($signature->last_name) ?></h3>
+            <h3 class="panel-title"><?= $this->Html->icon('pencil'); ?>  <?= h($signature->first_name) ?> <?= h($signature->last_name) ?></h3>
         </div>
         <table class="table">
             <tr>

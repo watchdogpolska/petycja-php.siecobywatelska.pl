@@ -5,9 +5,18 @@
                 <h3 class="panel-title"><?= __('Actions') ?></h3>
             </div>
             <ul class="list-group">
-                <?= $this->Html->link(__('New Post'), ['action' => 'add'], ['class' => 'list-group-item'] ) ?>
-                <?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'list-group-item']) ?>
-                <?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('plus') . ' ' . __('New Post'),
+                        ['action' => 'add'],
+                        ['escape' => false, 'class' => 'list-group-item'] ) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('list') . ' ' . __('List Users'),
+                        ['controller' => 'Users', 'action' => 'index'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('plus') . ' ' . __('New User'),
+                        ['controller' => 'Users', 'action' => 'add'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
             </ul>
         </div>
     </div>
@@ -41,14 +50,15 @@
                             <td><?= h($post->created) ?></td>
                             <td><?= h($post->modified) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['action' => 'view', $post->id], ['class' => 'btn btn-default']) ?>
-                                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $post->id], ['class' => 'btn btn-default']) ?>
+                                <?= $this->Html->link($this->Html->icon('eye'), ['action' => 'view', $post->id], ['escape' => false, 'class' => 'btn btn-default', 'title' => __('View')]) ?>
+                                <?= $this->Html->link($this->Html->icon('pencil'), ['action' => 'edit', $post->id], ['escape' => false, 'class' => 'btn btn-default', 'title' => __('Edit')]) ?>
                                 <?= $this->Form->postLink(
-                                    __('Delete'),
-                                    ['action' => 'delete', $post->id],
+                                    $this->Html->icon('trash'), ['action' => 'delete', $post->id],
                                     [
+                                        'escape' => false,
                                         'confirm' => __('Are you sure you want to delete # {0}?', $post->id),
-                                        'class' => 'btn btn-danger'
+                                        'class' => 'btn btn-danger',
+                                        'title' => __('Delete')
                                     ]) ?>
                             </td>
                         </tr>

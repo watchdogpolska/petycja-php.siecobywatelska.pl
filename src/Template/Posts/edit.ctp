@@ -6,17 +6,27 @@
             </div>
             <div class="list-group">
                 <?= $this->Form->postLink(
-                        __('Delete'),
+                        $this->Html->icon('trash') . ' ' . __('Delete'),
                         ['action' => 'delete', $post->id],
                         [
+                            'escape' => false,
                             'confirm' => __('Are you sure you want to delete # {0}?', $post->id),
                             'class' => 'list-group-item'
                         ]
                     )
                 ?>
-                <?= $this->Html->link(__('List Posts'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
-                <?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'list-group-item']) ?>
-                <?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('list') . ' ' . __('List Posts'),
+                        ['action' => 'index'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('list') . ' ' . __('List Users'),
+                        ['controller' => 'Users', 'action' => 'index'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(
+                        $this->Html->icon('plus') . ' ' . __('New User'),
+                        ['controller' => 'Users', 'action' => 'add'],
+                        ['escape' => false, 'class' => 'list-group-item']) ?>
             </div>
         </div>
     </nav>
