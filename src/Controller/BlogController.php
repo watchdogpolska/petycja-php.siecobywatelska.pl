@@ -37,10 +37,8 @@ class BlogController extends AppController
         $this->set('_serialize', ['posts']);
     }
 
-    public function view()
+    public function view($slug)
     {
-        $slug = $this->request->params['slug'];
-
         $post = $this->Posts->find('slugged', ['slug' => $slug])
                      ->find('visible')
                      ->contain(['Users'])
