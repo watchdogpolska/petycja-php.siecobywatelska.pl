@@ -55,6 +55,15 @@ Router::scope('/petition', function (RouteBuilder $routes) {
     $routes->connect('/map-points', ['controller' => 'Petition', 'action' => 'mapPoints'], ['_name' => 'petition.map_point', '_ext' => ['json']]);
 });
 
+Router::scope('/admin', function (RouteBuilder $routes){
+    $routes->connect('/', ['controller' => 'posts', 'action' => 'index']);
+    $routes->connect('/posts', ['controller' => 'posts', 'action' => 'index']);
+    $routes->connect('/signatures', ['controller' => 'signatures', 'action' => 'index']);
+    $routes->connect('/signatures/:action/*', ['controller' => 'signatures']);
+    $routes->connect('/users', ['controller' => 'users', 'action' => 'index']);
+    $routes->connect('/users/:action/*', ['controller' => 'users']);
+    $routes->connect('/posts/:action/*', ['controller' => 'posts']);
+});
 
 Router::scope('/', function (RouteBuilder $routes){
     $routes->connect('/', ['controller' => 'Blog', 'action' => 'index']);
