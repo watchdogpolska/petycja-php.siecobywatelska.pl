@@ -6,7 +6,7 @@
                 <div class="panel-heading">
                     <h2 class="panel-title">
                         <?= $this->element('post-type-icon', ['post' => $post]); ?>
-                        <?= $this->Html->link($post->title, ['action' => 'view', $post->id, $post->slug]) ?>
+                        <?= $this->Html->link($post->title, ['action' => 'view', $post->slug]) ?>
                     </h2>
                 </div>
                 <table class="table table-hover">

@@ -58,7 +58,7 @@ Router::scope('/petition', function (RouteBuilder $routes) {
 
 Router::scope('/', function (RouteBuilder $routes){
     $routes->connect('/', ['controller' => 'Blog', 'action' => 'index']);
-    $routes->connect('/:id/:slug/*', ['controller' => 'Blog', 'action' => 'view'], ['pass' => ['id', 'slug'], 'id' => '\d+']);
+    $routes->connect('/blog/:slug/', ['controller' => 'Blog', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z\-]+']);
 
     /**
      * Connect catchall routes for all controllers.

@@ -27,7 +27,7 @@
                         ['escape' => false, 'class' => 'list-group-item']) ?>
                 <?= $this->Html->link(
                         $this->Html->icon('globe') . ' ' . __('View on site'),
-                        ['controller' => 'blog', 'action' => 'view', $post->id],
+                        ['controller' => 'blog', 'action' => 'view', $post->slug],
                         ['escape' => false, 'class' => 'list-group-item']) ?>
             </div>
         </div>

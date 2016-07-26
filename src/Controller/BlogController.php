@@ -39,17 +39,12 @@ class BlogController extends AppController
 
     public function view()
     {
-        if(empty($this->request->params['slug'])) {
-            $id = $this->request->params['pass'];
-        }
-        else {
-            $id = $this->request->params['id'];
-        }
+        $slug = $this->request->params['slug'];
 
-        $post = $this->Posts->get($id, [
-            'finder' => 'visible',
-            'contain' => 'Users'
-        ]);
+        $post = $this->Posts->find('slugged', ['slug' => $slug])
+                     ->find('visible')
+                     ->contain(['Users'])
+                     ->firstOrFail();
 
         if ($post->type == 'link') {
             return $this->redirect($post->link_target);
