@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0c54afdc02f7878ae02e5cf3aa20b621",
-    "content-hash": "f865d6df7e6a21242448e549ecaff224",
+    "hash": "d230077eef4f2252a840a22921564576",
+    "content-hash": "e8deba42efb7a74d3c9b90f0bf1e6d71",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -258,13 +258,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mik-laj/localized.git",
-                "reference": "bbd135760cf4fcb791ee639f59cd249ae3db3b74"
+                "url": "https://github.com/cakephp/localized.git",
+                "reference": "80d896621b59558395d55f0c930541b117480b83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mik-laj/localized/zipball/bbd135760cf4fcb791ee639f59cd249ae3db3b74",
-                "reference": "bbd135760cf4fcb791ee639f59cd249ae3db3b74",
+                "url": "https://api.github.com/repos/cakephp/localized/zipball/80d896621b59558395d55f0c930541b117480b83",
+                "reference": "80d896621b59558395d55f0c930541b117480b83",
                 "shasum": ""
             },
             "require": {
@@ -281,12 +281,7 @@
                     "Cake\\Localized\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests",
-                    "Cake\\Localized\\Test\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -304,13 +299,7 @@
                 "l10n",
                 "localized"
             ],
-            "support": {
-                "issues": "https://github.com/cakephp/localized/issues",
-                "forum": "http://stackoverflow.com/tags/cakephp",
-                "irc": "irc://irc.freenode.org/cakephp",
-                "source": "https://github.com/cakephp/localized"
-            },
-            "time": "2016-07-21 13:16:21"
+            "time": "2016-07-23 17:58:54"
         },
         {
             "name": "cakephp/migrations",

@@ -12,8 +12,8 @@
         "cakephp/plugin-installer": "*",
         "holt59/cakephp3-bootstrap-helpers": "dev-master",
         "fzaninotto/Faker": "^1.6",
-        "cakephp/localized": "dev-master",
-        "muffin/slug": "^1.1"
+        "muffin/slug": "^1.1",
+        "cakephp/localized": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",
@@ -29,12 +29,6 @@
             "App\\": "src"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mik-laj/localized"
-        }
-    ],
     "autoload-dev": {
         "psr-4": {
             "App\\Test\\": "tests",
