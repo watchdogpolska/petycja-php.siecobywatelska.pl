@@ -68,6 +68,7 @@ Router::scope('/admin', function (RouteBuilder $routes) {
 Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Blog', 'action' => 'index']);
     $routes->connect('/blog/:slug/', ['controller' => 'Blog', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z\-]+']);
+    $routes->connect('/feed', ['controller' => 'Blog', 'action' => 'rss'], ['_name' => 'feed', '_ext' => ['rss']]);
 
     /**
      * Connect catchall routes for all controllers.

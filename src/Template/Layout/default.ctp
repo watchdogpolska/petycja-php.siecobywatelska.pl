@@ -28,7 +28,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>
-
+    <link rel="alternate" type="application/rss+xml" title="<?= $cakeDescription ?> Feed" href="<?= $this->Url->build(['_name' => 'feed', '_ext' => 'rss', '_full' => true]);?>">
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
 </head>

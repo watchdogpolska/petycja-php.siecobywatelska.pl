@@ -32,6 +32,7 @@ class BlogController extends AppController
         parent::initialize();
         $this->Auth->allow();
         $this->loadModel('Posts');
+        $this->loadComponent('RequestHandler');
     }
 
     /**
@@ -65,5 +66,20 @@ class BlogController extends AppController
         }
 
         $this->set(compact('post'));
+    }
+
+    /**
+     * rss method
+     *
+     * @return void
+     */
+    public function rss()
+    {
+        $posts = $this->Posts
+            ->find('visible')
+            ->limit(20)
+            ->order(['created' => 'desc']);
+
+        $this->set(compact('posts'));
     }
 }
