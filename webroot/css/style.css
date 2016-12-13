@@ -5884,3 +5884,15 @@ h1 {
 .btn-custom-brand:hover, .btn-custom-brand:active, .btn-custom-brand:focus {
   background: -webkit-linear-gradient(93deg, #a8b0c7 30%, white 80%);
   background: linear-gradient(-3deg, #a8b0c7 30%, white 80%); }
+
+.sign-counter {
+  font-size: 28px;
+  text-align: center; }
+  .sign-counter strong {
+    color: #000066;
+    display: block;
+    font-size: 45px; }
+
+.aggrament {
+  font-size: .7em;
+  color: ligten(black, 10%); }

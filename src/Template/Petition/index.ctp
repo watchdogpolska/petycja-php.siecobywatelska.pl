@@ -12,7 +12,11 @@
                 <?= $this->Form->input('last_name'); ?>
                 <?= $this->Form->input('email'); ?>
                 <?= $this->Form->textarea('comment'); ?>
-                <?= $this->Form->input('newsletter', array('label' => 'KOTEK')); ?>
+                <?= $this->Form->input('newsletter', array(
+                    'label' => array(
+                        'class' => 'aggrament',
+                        'text' => 'Zgodnie z Ustawą z dnia 18 lipca 2002 roku o świadczeniu usług drogą elektroniczną (Dz. U z 2002 r. Nr 144, poz. 1204 ze zm.) wyrażam zgodę na otrzymywanie od Fundacji Rodzić po Ludzku, ul. Nowolipie 13/15, 00 – 150 Warszawa informacji i materiałów o działalności Fundacji przesyłanych drogą elektroniczną. Zgoda może być w każdej chwili odwołana poprzeŁz wyslłanie maila na adres: fundacja@rodzicpoludzku.pl',
+                    ))); ?>
                 <?= $this->Form->input('giodo', array(
                     'type' => 'checkbox',
                     'label' => 'Giodo',
@@ -20,6 +24,13 @@
                 <?= $this->Form->input('location', array('label' => 'Miejscowość')); ?>
                 <?= $this->Form->button(__('Sign'), array('class'=> 'btn btn-custom-brand')) ?>
                 <?= $this->Form->end() ?>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body sign-counter">
+                Już
+                <strong><?= $this->Paginator->counter('{{count}}');?></strong>
+                podpisało
             </div>
         </div>
     </div>
