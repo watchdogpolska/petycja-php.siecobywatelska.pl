@@ -1,0 +1,29 @@
+{
+  "name": "petycje-php.siecobywatelska.pl",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/watchdogpolska/petycja-php.siecobywatelska.pl.svg?branch=master)](https://travis-ci.org/watchdogpolska/petycja-php.siecobywatelska.pl) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mik-laj/petycja-php.siecobywatelska.pl-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mik-laj/petycja-php.siecobywatelska.pl-1/issues"
+  },
+  "homepage": "https://github.com/mik-laj/petycja-php.siecobywatelska.pl-1#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  }
+}

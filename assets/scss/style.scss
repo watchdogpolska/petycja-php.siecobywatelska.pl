@@ -1,0 +1,87 @@
+
+//$body-bg:               blue !default;
+
+@import '_variables';
+
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+.header{
+    background: linear-gradient(white 30%, #BFD5ED);
+}
+.top{
+    padding: 40px;
+}
+.main-menu{
+    background: linear-gradient(#677DA8 1%, #234482 30%);
+    overflow: hidden;
+    padding: 5px;
+    border-bottom: 4px solid #FD0000;
+    a{
+        display: inline-block;
+        padding: 5px 15px;
+        color: white;
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        float: left;
+        &:not(:last-child){
+            border-right: 1px solid white;
+        }
+    }
+}
+#content{
+    background: #F1F1EF;
+    .main-content{
+        padding: 10px;
+        background: white;
+    }
+}
+
+h1{
+    position: relative;
+    color: #000066;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: .8em;
+    &:before{
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-left: .5em solid #000066;
+        border-bottom: .5em solid transparent;
+        border-top: .5em solid transparent;
+    }
+}
+.panel-default .panel-title{
+    font-size: $font-size-h2;
+    color: #000066;
+}
+
+.post-meta{
+    color: #A6A5A3;
+    margin-bottom: 15px;
+}
+
+.btn-custom-brand {
+  border: 1px solid #445B95;
+  border-radius: 5px;
+  color: #204180;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 16px;
+  background: -webkit-linear-gradient(93deg, #c7ccdb 30%, white 60%);
+  background: linear-gradient(-3deg, #c7ccdb 30%, white 60%);
+  text-transform: uppercase;
+  box-shadow: 5px 5px 8px 2px #C8CBDF;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-custom-brand:hover, .btn-custom-brand:active, .btn-custom-brand:focus {
+  background: -webkit-linear-gradient(93deg, #a8b0c7 30%, white 80%);
+  background: linear-gradient(-3deg, #a8b0c7 30%, white 80%);
+}

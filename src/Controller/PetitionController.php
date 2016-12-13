@@ -29,6 +29,7 @@ class PetitionController extends AppController
         $this->Auth->allow();
         $this->loadModel('Signatures');
         $this->loadComponent('RequestHandler');
+        $this->set('title', 'Petycja');
     }
 
     /**
@@ -65,7 +66,9 @@ class PetitionController extends AppController
         $signature = $this->Signatures->newEntity();
         if ($this->request->is('post')) {
             $petition = $this->Signatures->patchEntity($signature, $this->request->data);
-            if ($this->Signatures->save($signature)) {
+            if(!$this->request->data['giodo']) {
+                $this->Flash->error(__('The signature could not be saved. Please, try again.'));
+            } else if ($this->Signatures->save($signature)) {
                 $this->Flash->success(__('The signature has been saved.'));
 
                 return $this->redirect(['action' => 'thank']);

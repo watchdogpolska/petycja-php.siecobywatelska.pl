@@ -48,9 +48,10 @@ Router::scope('/auth', function (RouteBuilder $routes) {
     $routes->connect('/logout', ['controller' => 'Auth', 'action' => 'logout', ], [ '_name' => 'auth.logout']);
 });
 
-Router::scope('/petition', function (RouteBuilder $routes) {
+Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Petition', 'action' => 'index'], ['_name' => 'petition.index']);
     $routes->connect('/form', ['controller' => 'Petition', 'action' => 'add'], ['_name' => 'petition.add']);
+    $routes->connect('/list', ['controller' => 'Petition', 'action' => 'listSignature'], ['_name' => 'petition.list']);
     $routes->connect('/thank-you', ['controller' => 'Petition', 'action' => 'thank'], ['_name' => 'petition.thank']);
     $routes->connect('/map-points', ['controller' => 'Petition', 'action' => 'mapPoints'], ['_name' => 'petition.map_point', '_ext' => ['json']]);
 });
@@ -66,7 +67,7 @@ Router::scope('/admin', function (RouteBuilder $routes) {
 });
 
 Router::scope('/', function (RouteBuilder $routes) {
-    $routes->connect('/', ['controller' => 'Blog', 'action' => 'index']);
+    $routes->connect('/blog', ['controller' => 'Blog', 'action' => 'index']);
     $routes->connect('/blog/:slug/', ['controller' => 'Blog', 'action' => 'view'], ['pass' => ['slug'], 'slug' => '[a-z\-]+']);
     $routes->connect('/feed', ['controller' => 'Blog', 'action' => 'rss'], ['_name' => 'feed', '_ext' => ['rss']]);
 

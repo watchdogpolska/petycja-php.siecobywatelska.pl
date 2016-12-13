@@ -45,6 +45,9 @@ class GeocodeBehavior extends Behavior
                 'key' => 'AIzaSyDBgRjePHflnt1s1Ua9XyeApOemyPkb1zE'
             ]
         )->json;
+        if(!isset($response['results'][0])){
+            return null;
+        }
 
         return $response['results'][0]['geometry']['location'];
     }
@@ -64,8 +67,10 @@ class GeocodeBehavior extends Behavior
         if (!empty($value)) {
             $location = $this->requestApiForLocation($value);
 
-            $entity->set($config['geo_lat'], $location['lat']);
-            $entity->set($config['geo_lng'], $location['lng']);
+            if($location) {
+                $entity->set($config['geo_lat'], $location['lat']);
+                $entity->set($config['geo_lng'], $location['lng']);
+            }
         }
     }
 

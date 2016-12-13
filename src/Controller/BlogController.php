@@ -33,6 +33,7 @@ class BlogController extends AppController
         $this->Auth->allow();
         $this->loadModel('Posts');
         $this->loadComponent('RequestHandler');
+        $this->set('title', "Aktualności");
     }
 
     /**
@@ -46,6 +47,7 @@ class BlogController extends AppController
 
         $this->set(compact('posts'));
         $this->set('_serialize', ['posts']);
+
     }
 
     /**

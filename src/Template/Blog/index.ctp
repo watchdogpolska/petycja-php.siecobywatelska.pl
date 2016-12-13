@@ -9,33 +9,17 @@
                         <?= $this->Html->link($post->title, ['action' => 'view', $post->slug]) ?>
                     </h2>
                 </div>
-                <table class="table table-hover">
-                    <tbody>
-                        <?php if($post->created!=$post->modified):?>
-                            <tr>
-                                <th scope="row"><?= __('Modification date:'); ?></th>
-                                <td><?= h($post->modified) ?></td>
-                            </tr>
-                        <?php endif; ?>
-                        <tr>
-                            <th scope="row"><?= __('Creation date:'); ?> </th>
-                            <td><?= h($post->created) ?></td>
-                        </tr>
-                        <?php if($post->has('user')):?>
-                        <tr>
-                            <th scole="row"><?= __('Author:') ?></th>
-                            <td><?= $post->user->display_name; ?></td>
-                        </tr>
-                        <?php endif; ?>
-                    </tbody>
-                </table>
                 <div class="panel-body">
+                    <div class="post-meta">
+                        <b><?= __('Creation date:'); ?> </b>
+                        <?= h($post->created) ?>
+                    </div>
                     <?php
                     $link_more = $this->Html->link(
                         __('Read more') . ' <span class="sr-only">' . h($post->title) . '</span>' ,
                         ['action' => 'view', $post->slug],
                         ['escape' => false]); ?>
-                    <?= $this->Text->truncate($post->content, 255, ['exact' => false, 'ellipsis' => ' ' . $link_more]) ?>
+                    <?= $this->Text->truncate($post->content, 750, ['exact' => false, 'ellipsis' => ' ' . $link_more]) ?>
 
                 </div>
             </div>

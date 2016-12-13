@@ -1,16 +1,4 @@
 <div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title">Mapa</h3>
-            </div>
-            <div class="panel-body">
-                <div id="map" style="height: 400px"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
     <div class="col-lg-4 col-md-6 columns">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -24,9 +12,13 @@
                 <?= $this->Form->input('last_name'); ?>
                 <?= $this->Form->input('email'); ?>
                 <?= $this->Form->textarea('comment'); ?>
-                <?= $this->Form->input('newsletter'); ?>
-                <?= $this->Form->input('location'); ?>
-                <?= $this->Form->button(__('Submit')) ?>
+                <?= $this->Form->input('newsletter', array('label' => 'KOTEK')); ?>
+                <?= $this->Form->input('giodo', array(
+                    'type' => 'checkbox',
+                    'label' => 'Giodo',
+                    'required' => true)); ?>
+                <?= $this->Form->input('location', array('label' => 'Miejscowość')); ?>
+                <?= $this->Form->button(__('Sign'), array('class'=> 'btn btn-custom-brand')) ?>
                 <?= $this->Form->end() ?>
             </div>
         </div>
@@ -37,33 +29,22 @@
                 <h2 class="panel-title"><?= __('Signatures') ?></h2>
             </div>
             <div class="panel-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="col-xs-1" ><span data-toggle="tooltip" title="<?= __('Identifier'); ?>"><?= __('Id') ?></span></th>
-                            <th scope="col"><?= __('Name') ?></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($signatures as $signature): ?>
-                        <tr class="bg-info">
-                            <td><?= $this->Number->format($signature->id) ?></td>
-                            <td><?= h($signature->name) ?></td>
-                        </tr>
-                        <?php  if($signature->comment): ?>
-                        <tr>
-                            <td colspan="2"><?= h($signature->comment) ?></td>
-                        </tr>
-                        <?php  endif; ?>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-                <nav class="paginator text-center">
-                    <?= $this->Paginator->numbers([
-                        'prev' => 'i:chevron-left ' . __('previous'),
-                        'next' =>  __('next') . ' i:chevron-right',
-                        ]) ?>
-                </nav>
+                <?= $this->Html->image('banner.jpg', array('alt' => 'Walczymy o przywrócenie Standardów Opieki Okołoporodowej', 'class' => 'img-responsive'));?>
+                <p>Do:<br>
+Prezes Rady Ministr&oacute;w Beata Szydło<br>
+Kancelaria Prezesa Rady Ministr&oacute;w<br>
+Al. Ujazdowskie 1/3<br>
+00-583 Warszawa<br>
+<p><br /> </p>
+<p>Szanowna Pani Premier</p>
+<p>Apelujemy do Pani jako do Premier Rządu Polskiego, o przywr&oacute;cenie poprzedniego brzmienia Art. 22 ust. 5 Ustawy o działalności leczniczej i przywr&oacute;cenia Standard&oacute;w Opieki Okołoporodowej jako standardu medycznego.</p>
+<p>Wprowadzone zmiany w Ustawie o działalności leczniczej likwidują aktualnie obowiązujące standardy medyczne dotyczące prowadzenia porodu fizjologicznego, łagodzenia b&oacute;lu w trakcie porodu, postępowania w ciąży powikłanej, określonych patologii i niepowodzeń położniczych. Dotychczasowe standardy medyczne zostaną ograniczone do zaledwie standard&oacute;w organizacyjnych opieki zdrowotnej.</p>
+<p>Prace nad Standardami rozpoczęły się na wniosek Ministra Zdrowia prof. Zbigniewa Religi w 2007 roku. Powołany przez Ministra zesp&oacute;ł ekspert&oacute;w (położnicy i neonatolodzy, położne, strona społeczna reprezentowana przez Fundację Rodzić po Ludzku) stworzył dokument, kt&oacute;rego celem jest ograniczenie nadmiernej medykalizacji porodu fizjologicznego, przestrzeganie praw pacjenta, stosowanie zasad tr&oacute;jstopniowej opieki perinatalnej i zwiększenie satysfakcji pacjentek z opieki okołoporodowej. Standardy powstały w odpowiedzi na głos tysięcy kobiet, kt&oacute;re nie chciały więcej doświadczać odhumanizowanej opieki, szpitalnej rutyny, przestarzałych, często szkodliwych procedur medycznych. Sukcesem Standard&oacute;w jest r&oacute;wnież to, że przestrzeganie praw pacjenta zostało określone jako stały element nowoczesnej opieki. Uwzględniają one potrzeby kobiet rodzących, a wprowadzone procedury medyczne są zgodne z najnowszymi doniesieniami naukowymi. Stąd w Standardach znalazły się między innymi zalecenia o zachęcaniu kobiety do aktywności w czasie porodu, wyboru dogodnej pozycji do parcia, możliwości chodzenia czy picia. Uznano r&oacute;wnież terapeutyczną rolę osoby bliskiej, a także podkreślono rolę pierwszego kontaktu matki z dzieckiem i karmienia piersią.</p>
+<p>Wiemy, że nie we wszystkich szpitalach położniczych Standardy były w pełni przestrzegane. Niemniej, z roku na rok, sytuacja w opiece okołoporodowej poprawiała się. Obawiamy się, że likwidacja Standard&oacute;w spowoduje pogorszenie, i tak niezbyt dobrej, sytuacji kobiet na porod&oacute;wkach. Brak powszechnie obowiązującego prawa cofnie nas do czas&oacute;w, kiedy zasady postępowania w szpitalu stanowione były przez pracujący w nim personel, a kobieta traktowana była w spos&oacute;b nieludzki i przedmiotowy.</p>
+<p>Oburza nas fakt, że Minister Zdrowia, Konstanty Radziwiłł ignorując wypracowany przez środowiska medyczne i pacjenckie konsensus, przychylił się do jedynego głosu sprzeciwu reprezentowanego przez Naczelną Radę Lekarską. Co więcej, zataił zaproponowaną zmianę przed opinią publiczną, a także ekspertami zajmującymi się zagadnieniami poprawy opieki okołoporodowej, uniemożliwiając tym samym podjęcie otwartej dyskusji nad sensem jej wprowadzenia.</p>
+<p>Liczymy na to, że spowoduje Pani przywr&oacute;cenie Standard&oacute;w Opieki Okołoporodowej stanowiących gwarancję nowoczesnej, skierowanej na potrzeby kobiet opieki, i da tym samym każdej Polce możliwość rodzenia po ludzku.</p>
+<p>Joanna Pietrusiewicz</p>
+<p>Fundacja Rodzić po Ludzku</p>
             </div>
         </div>
     </div>
