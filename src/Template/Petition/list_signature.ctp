@@ -11,17 +11,50 @@
                     // 'horizontal' => true,
                     'url' => '/'
                 ]) ?>
-                <?= $this->Form->input('first_name'); ?>
-                <?= $this->Form->input('last_name'); ?>
+                <?= $this->Form->input('first_name', array('label' => 'Imię (First name)')); ?>
+                <?= $this->Form->input('last_name', array('label' => 'Nazwisko (Last name)')); ?>
                 <?= $this->Form->input('email'); ?>
-                <?= $this->Form->textarea('comment'); ?>
-                <?= $this->Form->input('newsletter', array('label' => 'KOTEK')); ?>
+                <?= $this->Form->textarea('comment', array(
+                    'placeholder' => 'Twój komentarz (Your comment)'
+                )); ?>
+                <?= $this->Form->input('location', array('label' => 'Miejscowość (Location)')); ?>
                 <?= $this->Form->input('giodo', array(
                     'type' => 'checkbox',
-                    'label' => 'Giodo',
-                    'required' => true)); ?>
-                <?= $this->Form->input('location', array('label' => 'Miejscowość')); ?>
-                <?= $this->Form->button(__('Sign'), array('class'=> 'btn btn-custom-brand')) ?>
+                    'label' => array(
+                        'class' => 'aggrament',
+                        'text' => '<span class="aggrement-text">
+<span class="aggrement-text-short">Zgodą na przetwarzanie danych na cele petycji <a href="#" class="aggrement-text-more">Pokaż całość</a></span>
+<span class="aggrement-text-full">
+Wyrażam zgodę na przetwarzanie moich danych osobowych w celu otrzymywania od Fundacji Rodzić po Ludzku wiadomości związanych z petycją do Prezesa Rady Ministrów o przywrócenie Standardów Opieki Okołoporodowej. Zgoda może być w każdej chwili odwołana poprzez wysłanie maila na adres: fundacja@rodzicpoludzku.pl. Wyrażam zgodę na opublikowanie ujawnionych w petycji danych osobowych w zakresie: imię i nazwisko, miejscowość na stronie internetowej standardyzostaja.rodzicpoludzku.pl
+</span>
+</span>
+<span class="aggrement-text">
+<span class="aggrement-text-short">Consent to process personal data related to the petition <a href="#" class="aggrement-text-more">Show more</a></span>
+<span class="aggrement-text-full">
+I hereby give consent to process my personal data to receive messages from the Childbirth with Dignity Foundation related to the petition to the Prime Minister on restoring the Standards of Perinatal Care. Consent can be revoked at any time by sending information to the following email: fundacja@rodzicpoludzku.pl. I declare consent for publishing my personal data in the petition concerning: name, last name and town on the website www.standardyzostaja.rodzicpoludzku.pl
+</span>
+
+',
+                        'escape' => false
+
+                    ), 'required' => true)); ?>
+                <?= $this->Form->input('newsletter', array(
+                    'type' => 'checkbox',
+                    'label' => array(
+                        'class' => 'aggrament',
+                        'text' => '
+                            <span class="aggrement-text">
+                                <span class="aggrement-text-short">Zgoda na przesyłanie informacji na temat dzialności fundacji <a href="#" class="aggrement-text-more">Pokaż całośc</a></span>
+                                <span class="aggrement-text-full">Zgodnie z Ustawą z dnia 18 lipca 2002 roku o świadczeniu usług drogą elektroniczną (Dz. U z 2002 r. Nr 144, poz. 1204 ze zm.) wyrażam zgodę na otrzymywanie od Fundacji Rodzić po Ludzku, ul. Nowolipie 13/15, 00 – 150 Warszawa informacji i materiałów o działalności Fundacji przesyłanych drogą elektroniczną. Zgoda może być w każdej chwili odwołana poprzez wysłanie maila na adres: fundacja@rodzicpoludzku.pll</span>
+                            </span>
+                            <span class="aggrement-text">
+                                <span class="aggrement-text-short">Consent to send information about the activities of the Foundation</span>
+                                
+                            </span>',
+                        'escape' => false
+                    ))); ?>
+                <?= $this->Form->button(__('Podpisz (Sign)'), array(
+                    'class' => 'btn btn-custom-brand')) ?>
                 <?= $this->Form->end() ?>
             </div>
         </div>

@@ -5908,3 +5908,15 @@ h1 {
 
 .sponsor-image {
   width: 200px; }
+
+.aggrement-text .aggrement-text-short {
+  display: inline; }
+
+.aggrement-text .aggrement-text-full {
+  display: none; }
+
+.aggrement-text.aggrement-text-show-full .aggrement-text-short {
+  display: none; }
+
+.aggrement-text.aggrement-text-show-full .aggrement-text-full {
+  display: inline; }

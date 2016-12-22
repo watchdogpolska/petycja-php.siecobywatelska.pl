@@ -132,7 +132,7 @@ if(isset($title)){
     </footer>
     <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.js') ?>
     <?= $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js') ?>
-
+    <?= $this->Html->script('/js/aggrement.js') ?>
     <?= $this->fetch('script') ?>
 
     <!-- See: https://developers.facebook.com/docs/plugins/share-button -->
