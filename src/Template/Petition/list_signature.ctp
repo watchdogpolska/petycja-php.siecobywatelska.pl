@@ -64,13 +64,14 @@
     </div>
 </div>
 <?php
-$this->Html->script('/js/map-points.js', [
-    'block' => true
-]);
+
+
 ?>
 <?php $this->append('script'); ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoPxTl-O2LzNrwJBQC8gwULYkxRMIxlHs&callback=init_map"
 async defer></script>
+<script src="https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js"></script>
+<?= $this->Html->script('/js/map-points.js'); ?>
 <script>
     (function ($) {
         $(function () {

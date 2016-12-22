@@ -98,7 +98,10 @@ class PetitionController extends AppController
     {
         $this->RequestHandler->renderAs($this, 'json');
 
-        $points = $this->Signatures->find('geocoded')->select(['geo_lat', 'geo_lng']);
+        $points = $this->Signatures
+            ->find('geocoded')
+            ->select(['geo_lat', 'geo_lng']);
+            //->distinct(['geo_lat', 'geo_lng']);
 
         $this->set(compact('points'));
         $this->set('_serialize', ['points']);
