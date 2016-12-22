@@ -98,6 +98,32 @@ if(isset($title)){
         </div>
     </div>
     <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="sponsor-entry">
+                            <div class="sponsor-title">Wykonanie:</div>
+                            <?= $this->Html->image('logo-watchdog.png', array(
+                                'alt' => 'Sieć Obywatelska Watchdog Polska',
+                                'url' => 'https://siecobywatelska.pl/',
+                                'class' => 'img-responsive sponsor-image'
+                            ));?>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="sponsor-entry">
+                            <div class="sponsor-title">Wsparcie techniczne:</div>
+                            <?= $this->Html->image('logo-zenbox.png', array(
+                                'alt' => 'Zenbox.pl - Hosting bez zmartwień',
+                                'url' => 'https://zenbox.pl/',
+                                'class' => 'img-responsive sponsor-image'
+                            ));?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <?= $this->Html->script('https://code.jquery.com/jquery-2.2.4.js') ?>
     <?= $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js') ?>

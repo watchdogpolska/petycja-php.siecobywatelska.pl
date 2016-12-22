@@ -5824,7 +5824,9 @@ button.close {
   background: linear-gradient(#677DA8 1%, #234482 30%);
   overflow: hidden;
   padding: 5px;
-  border-bottom: 4px solid #FD0000; }
+  border-bottom: 4px solid #FD0000;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
   .main-menu a {
     display: inline-block;
     padding: 5px 15px;
@@ -5896,3 +5898,13 @@ h1 {
 .aggrament {
   font-size: .7em;
   color: ligten(black, 10%); }
+
+.footer-content {
+  padding: 50px; }
+
+.sponsor-title {
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+.sponsor-image {
+  width: 200px; }
