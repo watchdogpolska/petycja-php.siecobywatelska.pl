@@ -32,6 +32,11 @@ if(isset($title)){
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
+    <meta property="og:url"           content="http://standardyzostaja.rodzicpoludzku.pl/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Ochrona Standardów Opieki Okołoporodowej" />
+    <meta property="og:description"   content="Podpisz petycje do Premier Beaty Szydło" />
+    <meta property="og:image"         content="http://standardyzostaja.rodzicpoludzku.pl/img/banner.jpg">
 
     <?= $this->Html->css('/css/style.css') ?>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css') ?>
@@ -129,5 +134,31 @@ if(isset($title)){
     <?= $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js') ?>
 
     <?= $this->fetch('script') ?>
+
+    <!-- See: https://developers.facebook.com/docs/plugins/share-button -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
