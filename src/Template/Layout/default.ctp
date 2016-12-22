@@ -84,9 +84,9 @@ if(isset($title)){
                         ?>
                         <a href="/list"><?php echo __('Signatures'); ?></a>
                     </li>
-                    <li>
+<!--                     <li>
                         <?= $this->Html->link(__('Aktualności'), ['controller' => 'Blog', 'action' => 'index']) ?>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
         </div>
