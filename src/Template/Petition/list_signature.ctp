@@ -49,7 +49,7 @@ I hereby give consent to process my personal data to receive messages from the C
                             </span>
                             <span class="aggrement-text">
                                 <span class="aggrement-text-short">Consent to send information about the activities of the Foundation</span>
-                                
+
                             </span>',
                         'escape' => false
                     ))); ?>
@@ -103,7 +103,7 @@ I hereby give consent to process my personal data to receive messages from the C
 <?php $this->append('script'); ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoPxTl-O2LzNrwJBQC8gwULYkxRMIxlHs&callback=init_map"
 async defer></script>
-<script src="https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js"></script>
+<!-- <script src="https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js"></script> -->
 <?= $this->Html->script('/js/map-points.js'); ?>
 <script>
     (function ($) {
