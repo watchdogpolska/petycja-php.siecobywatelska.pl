@@ -10,7 +10,7 @@ Termin realizacji: 1 lipiec - 31 lipiec
 ### Założenia projektu
 
 * Aplikacja w prosty sposób powinna być możliwa do dostosowania do różnych akcji. 
-* PHP/CakePHP + MySQL/PostgreSQL + SCSS/Bootstrap
+* PHP/CakePHP + MySQL + SCSS/Bootstrap
 * **Tworzenie aplikacji ma mieć szczególny charakter edukacyjny dla wszystkich jego współpracowników**
 * Podczas tworzenia aplikacji należy podejmować zawsze decyzje, która zwiekszają jakość kodu nawet kosztem czasu realizacji (no ugly hack)
 
